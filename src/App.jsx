@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div>
+    <div id="comingSoon">
       <h1>Digital Scrapbook</h1>
       <p>Coming soon...</p>
     </div>
