@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/digital-scrapbook/static/css/main.f855e6bc.css",
+    "main.js": "/digital-scrapbook/static/js/main.48341061.js",
+    "static/js/453.bfeb5f12.chunk.js": "/digital-scrapbook/static/js/453.bfeb5f12.chunk.js",
+    "static/media/logo.svg": "/digital-scrapbook/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/digital-scrapbook/index.html",
+    "main.f855e6bc.css.map": "/digital-scrapbook/static/css/main.f855e6bc.css.map",
+    "main.48341061.js.map": "/digital-scrapbook/static/js/main.48341061.js.map",
+    "453.bfeb5f12.chunk.js.map": "/digital-scrapbook/static/js/453.bfeb5f12.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.48341061.js"
+  ]
+}
