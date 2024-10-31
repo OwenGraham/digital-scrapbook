@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 #comingSoon {
   text-align: center;
+  display: block;
 }
