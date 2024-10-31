@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.2a34580b.css","mappings":"AAAA,EACE,qBACF,CAEA,YACE,iBACF","sources":["index.css"],"sourcesContent":["* {\n  box-sizing: border-box;\n}\n\n#comingSoon {\n  text-align: center;\n}\n"],"names":[],"sourceRoot":""}

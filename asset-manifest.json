@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/digital-scrapbook/static/css/main.2a34580b.css",
-    "main.js": "/digital-scrapbook/static/js/main.832195aa.js",
+    "main.css": "/digital-scrapbook/static/css/main.c898be49.css",
+    "main.js": "/digital-scrapbook/static/js/main.e823353e.js",
     "index.html": "/digital-scrapbook/index.html",
-    "main.2a34580b.css.map": "/digital-scrapbook/static/css/main.2a34580b.css.map",
-    "main.832195aa.js.map": "/digital-scrapbook/static/js/main.832195aa.js.map"
+    "main.c898be49.css.map": "/digital-scrapbook/static/css/main.c898be49.css.map",
+    "main.e823353e.js.map": "/digital-scrapbook/static/js/main.e823353e.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a34580b.css",
-    "static/js/main.832195aa.js"
+    "static/css/main.c898be49.css",
+    "static/js/main.e823353e.js"
   ]
 }
