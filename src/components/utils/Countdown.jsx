@@ -25,7 +25,7 @@ export default function Countdown({ targetDate }) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [targetDate, calculateTimeLeft]);
 
   const timerComponents = [];
 
