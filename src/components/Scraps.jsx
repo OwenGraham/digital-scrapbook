@@ -9,7 +9,7 @@ import EventComponent from "./scraps/EventComponent";
 import Trip from "./scraps/Trip";
 import "../styles.css";
 
-export default function Scraps() {
+export default function Scraps({ selectedFilters }) {
   const [scraps, setScraps] = useState([]);
   const [selectedScrap, setSelectedScrap] = useState(null);
 
@@ -42,10 +42,15 @@ export default function Scraps() {
     }
   };
 
+  const filteredScraps = scraps.filter(
+    (scrap) =>
+      selectedFilters.includes("All") || selectedFilters.includes(scrap.type)
+  );
+
   return (
     <section id="scraps">
-      {scraps.length > 0 ? (
-        scraps.map((scrap, index) => (
+      {filteredScraps.length > 0 ? (
+        filteredScraps.map((scrap, index) => (
           <div key={index} className="scrap-placeholder">
             <img
               src={scrap.img}
@@ -55,7 +60,7 @@ export default function Scraps() {
           </div>
         ))
       ) : (
-        <p>Loading scraps...</p>
+        <p>No filters selected</p>
       )}
       {selectedScrap && (
         <div className="overlay" onClick={() => setSelectedScrap(null)}>

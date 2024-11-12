@@ -1,11 +1,18 @@
+import { useState } from "react";
 import "./styles.css";
-
+import Filters from "./components/Filters.jsx";
 import Scraps from "./components/Scraps.jsx";
 
 function App() {
+  const [selectedFilters, setSelectedFilters] = useState([]);
+
   return (
     <div id="app">
-      <Scraps />
+      <Filters
+        selectedFilters={selectedFilters}
+        setSelectedFilters={setSelectedFilters}
+      />
+      <Scraps selectedFilters={selectedFilters} />
     </div>
   );
 }
