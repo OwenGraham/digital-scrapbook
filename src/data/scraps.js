@@ -85,5 +85,76 @@ export const scraps = [
     "releaseYear": 1955,
     "isbn": "0618042261",
     "review": "Was really excited for this during my reread of the trilogy, as I skipped it on my first read many years ago. Ended up skipping lots of it again... mostly really tedious stuff like notes on translation. I did enjoy the longer more narrative bits though, and liked how it was written by in-world sources." 
+  },
+  {
+    "type": "Film",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_zRMmaYc85XGNlEJJk4pDv-tXYkzIy1KhuTEYQRuYldxFMprEATcHsUHqSZWmxK1VuAloyw",
+    "rating": 4,
+      "title": "The Last Duel",
+      "director": "Ridley Scott",
+      "releaseYear": 2021,
+      "review": "Giving Ridley Scott another chance at a historical drama after Napoleon and ahead of Gladiator 2, and I'm glad I did. Of all the things I expected from this film, a feminist message about patriarchy in medieval times (still very applicable today) and listening to women's voices in rape cases wasn't one of them. I saw a review on Letterboxd dismissing it as a juvenile attempt at a \"what if we actually listened to women\" story but it's something I've never seen in the genre before and something I think is very needed",
+  },
+  {
+    "type": "Film",
+    "img": "https://m.media-amazon.com/images/M/MV5BYTJkNGQyZDgtZDQ0NC00MDM0LWEzZWQtYzUzZDEwMDljZWNjXkEyXkFqcGc@._V1_QL75_UY281_CR4,0,190,281_.jpg",
+    "rating": 4,
+    "title": "The Godfather",
+    "director": "Francis Ford Coppola",
+    "releaseYear": 1972,
+    "review": "Finally got round to this now it's on streaming. Maybbee didn't quite live up to the hype but only since that's a very tall order for a film often quoted as the GOAT. I did however really enjoy it, and it's grown on me even more since watching it."
+  },
+  {
+    "type": "Film",
+    "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQrwjQB8-7HH2EgNxk6DPF3RTQ_lq957fP4dC66yhOWK1f-0VBLiofu-HvaF5OVmCEuESvxfg",
+    "rating": 3.5,
+    "title": "As Good As It Gets",
+    "director": "James L. Brooks",
+    "releaseYear": 1997,
+    "review": "A recomendation from Martina. Really fun, great characters ,Jack Nicholson was great. Suprised how much the film made me laugh out loud. Some of the jokes would not fly today but I don't know if you could make an actual case against them today, I guess just not needed."
+  },
+  {
+    "type": "Album",
+    "img": "https://f4.bcbits.com/img/a3874459819_10.jpg",
+    "rating": 4,
+    "title": "Ants From Up There",
+    "artist": "Black Country, New Road",
+    "releaseYear": 2022,
+    "review": "Recomendation from Emily. I listened to this on a flight during the descent into Rome Ciampino, quite fitting. Feels like music for closeted theatre boys and I'm here for it. Whenever I'm home alone I find myself shouting \"She had Billie Eilish style\" in my best 2000s emo voice, for some reason."
+  },
+  {
+    "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/aqcdmfttkq4cuvv9nuwx/AIR+MAX+PLUS+III.png", 
+    "type": "Wishlist",
+    "name": "Air Max Plus 3",
+    "brand": "Nike",
+    "price": 174.99,
+    "link": "https://www.nike.com/gb/t/air-max-plus-iii-shoes-mJkmzK"
+  },
+  {
+    "type": "Film",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWKmjAuI_ccZ9htSy6Rder-WwAE-UOLSF6fwLT9XE0v37P8rDA",
+    "rating": 3,
+    "title": "The Death of Stalin",
+    "director": "Armando Iannucci",
+    "releaseYear": 2017,
+    "review": "Great cast and could tell they had a lot of fun making it. I correctly guessed that my mum was a fan of it, and she hates most films. I did really enjoy it, but it got a bit tired towards the end."
+  },
+  {
+    "type": "Film",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPpB462o3YmgSSa5ZhEwUSqyzbLkdiC02Vig&s",
+    "rating": 3,
+    "title": "Small Things Like These",
+    "director": "Tim Mielants",
+    "releaseYear": 2024,
+    "review": "Had nothing to do on a Saturday night and so decided to take my parents to the cinema, and this was the only thing showing that drew me in. The film was very slow, but I enjoyed Cillian Murphy, the setting (similar to Starve Acre in a way, I enjoy the familiarity), and the cinematography were great. However, I feel stupid to admit that I was pretty confused throughout the film and needed my mum to explain it afterwards, as I had never heard of the Magdalene Laundries. I think in a way I satisfied some of the motivation behind Cillian making this film as the debut of his studio, as when I got home I read the Wikipedia page for the Magdalene laundries and did some learning. Horrific stuff."
+  },
+  {
+    "type": "Film",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS_MWAGYS7qxHX4bwKT0TyTrJ6mB6V1DYrarKoOvjw2gvnGly7T5-Pt6B_uH7HOZd-O_KP",
+    "rating": 4,
+    "title": "Taxi Driver",
+    "director": "Martin Scorsese",
+    "releaseYear": 1976,
+    "review": "A meadering and uneventful plot driven by captivating characters and iconic visuals, my favourite genre. People like this don't exist in real life, but the acting and dialogue transport you to a world where they do, and you're left grappling with the morals you know to struggle to reason with the characters."
   }
 ];
