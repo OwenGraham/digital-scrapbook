@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Chillax-Variable";
+  src: url("../assets/fonts/Chillax-Variable.ttf") format("truetype");
+}
+
 #filters {
   display: flex;
   justify-content: space-between;
@@ -14,7 +19,12 @@ li {
   display: flex;
   align-items: center;
   font-size: 16px;
+  font-family: "Chillax-Variable";
   user-select: none;
+}
+
+#selected {
+  font-style: bold;
 }
 
 li:hover {
