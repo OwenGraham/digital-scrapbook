@@ -20,13 +20,14 @@
   max-width: 700px;
 }
 
-#scraps:hover {
+.scrap-preview img:hover {
   cursor: pointer;
 }
 
 #scraps img {
   height: 200px;
-  margin: 7px;
+  margin: 3px;
+  margin-bottom: 0px;
 }
 
 .scrap {

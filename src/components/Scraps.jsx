@@ -51,7 +51,7 @@ export default function Scraps({ selectedFilters }) {
     <section id="scraps">
       {filteredScraps.length > 0 ? (
         filteredScraps.map((scrap, index) => (
-          <div key={index} className="scrap-placeholder">
+          <div key={index} className="scrap-preview">
             <img
               src={scrap.img}
               alt={`Scrap ${index}`}
