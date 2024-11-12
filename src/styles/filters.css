@@ -1,0 +1,22 @@
+#filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #f0e5cf;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  user-select: none;
+}
+
+li:hover {
+  cursor: pointer;
+}
