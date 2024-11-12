@@ -69,6 +69,8 @@
 
 .scrap img {
   width: 170px;
+  height: auto;
+  object-fit: contain;
 }
 
 .scrap h1 {
