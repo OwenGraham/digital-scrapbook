@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles.css";
+import "./styles/app.css";
 import Filters from "./components/Filters.jsx";
 import Scraps from "./components/Scraps.jsx";
 
@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div id="app">
+      <h1>Owen's Digital Scrapbook</h1>
       <Filters
         selectedFilters={selectedFilters}
         setSelectedFilters={setSelectedFilters}

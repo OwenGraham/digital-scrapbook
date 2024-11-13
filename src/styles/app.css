@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Tanker-Regular";
+  src: url("../assets/fonts/Tanker-Regular.ttf") format("truetype");
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#app h1 {
+  font-family: Tanker-Regular;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}

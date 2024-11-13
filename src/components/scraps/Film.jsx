@@ -1,7 +1,7 @@
 export default function Film({
   img,
   rating,
-  title,
+  name,
   director,
   releaseYear,
   review,
@@ -10,7 +10,7 @@ export default function Film({
     <section className="scrap">
       <img src={img} alt="Cover for film" />
       <h1>{rating}/5 Stars</h1>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
       <p>{director}</p>
       <p>{releaseYear}</p>
       <div>
