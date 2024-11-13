@@ -1,3 +1,5 @@
+import StarRating from "../utils/StarRating";
+
 export default function Album({
   img,
   rating,
@@ -9,7 +11,7 @@ export default function Album({
   return (
     <section className="scrap">
       <img src={img} alt="Cover for album" />
-      <h1>{rating} /5 Stars</h1>
+      <StarRating rating={rating} />
       <h2>{name}</h2>
       <p>{artist}</p>
       <p>{releaseYear}</p>

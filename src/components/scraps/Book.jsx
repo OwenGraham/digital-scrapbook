@@ -1,3 +1,5 @@
+import StarRating from "../utils/StarRating";
+
 export default function Book({
   img,
   rating,
@@ -10,7 +12,7 @@ export default function Book({
   return (
     <section className="scrap">
       <img src={img} alt="Cover for book" />
-      <h1>{rating} /5 Stars</h1>
+      <StarRating rating={rating} />
       <h2>{name}</h2>
       <p>{author}</p>
       <p>{releaseYear}</p>
