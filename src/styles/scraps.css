@@ -17,12 +17,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 10px;
   position: relative;
 }
 
 .scrap-preview img:hover {
   cursor: pointer;
-  filter: brightness(0.5);
+  filter: brightness(0.7);
 }
 
 .scrap-preview h2 {
@@ -31,6 +32,7 @@
   color: white;
   opacity: 0;
   transition: opacity 0.3s ease;
+  font-family: Excon-Variable;
 }
 
 .scrap-preview:hover h2 {
@@ -113,4 +115,9 @@
 
 .scrap div {
   background: #f0e5cf;
+}
+
+#star-rating {
+  background: none;
+  margin-top: 15px;
 }

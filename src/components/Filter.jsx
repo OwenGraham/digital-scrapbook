@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DeselectIcon from "../assets/icons/deselect.png";
 
-export default function Filter({ children, onClick }) {
-  const [selected, setSelected] = useState(false);
+export default function Filter({ children, onClick, selected }) {
+  const [isSelected, setIsSelected] = useState(selected);
+
+  useEffect(() => {
+    setIsSelected(selected);
+  }, [selected]);
 
   const handleClick = () => {
-    setSelected(!selected);
+    setIsSelected(!isSelected);
     onClick();
   };
 
   return (
-    <li className={selected ? "selected" : ""} onClick={handleClick}>
+    <li className={isSelected ? "selected" : ""} onClick={handleClick}>
       {children}
-      {selected && (
+      {isSelected && (
         <img src={DeselectIcon} alt="Selected Icon" className="icon" />
       )}
     </li>
