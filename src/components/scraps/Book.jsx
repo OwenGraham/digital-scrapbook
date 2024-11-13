@@ -1,7 +1,7 @@
 export default function Book({
   img,
   rating,
-  title,
+  name,
   author,
   releaseYear,
   isbn,
@@ -11,7 +11,7 @@ export default function Book({
     <section className="scrap">
       <img src={img} alt="Cover for book" />
       <h1>{rating} /5 Stars</h1>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
       <p>{author}</p>
       <p>{releaseYear}</p>
       <p>{isbn}</p>

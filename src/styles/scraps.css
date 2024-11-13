@@ -1,14 +1,6 @@
 @font-face {
   font-family: "Excon-Variable";
-  src: url("./assets/fonts/Excon-Variable.ttf") format("truetype");
-}
-
-#app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10%;
+  src: url("../assets/fonts/Excon-Variable.ttf") format("truetype");
 }
 
 #scraps {
@@ -20,8 +12,29 @@
   max-width: 700px;
 }
 
+.scrap-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
 .scrap-preview img:hover {
   cursor: pointer;
+  filter: brightness(0.5);
+}
+
+.scrap-preview h2 {
+  position: absolute;
+  top: 50%;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scrap-preview:hover h2 {
+  opacity: 1;
 }
 
 #scraps img {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import DeselectIcon from "../assets/deselect.png";
+import DeselectIcon from "../assets/icons/deselect.png";
 
 export default function Filter({ children, onClick }) {
   const [selected, setSelected] = useState(false);

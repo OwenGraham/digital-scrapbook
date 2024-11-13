@@ -1,7 +1,7 @@
 export default function Album({
   img,
   rating,
-  title,
+  name,
   artist,
   releaseYear,
   review,
@@ -10,7 +10,7 @@ export default function Album({
     <section className="scrap">
       <img src={img} alt="Cover for album" />
       <h1>{rating} /5 Stars</h1>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
       <p>{artist}</p>
       <p>{releaseYear}</p>
       <div>

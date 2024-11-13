@@ -7,7 +7,7 @@ import Recipe from "./scraps/Recipe";
 import Wishlist from "./scraps/Wishlist";
 import EventComponent from "./scraps/EventComponent";
 import Trip from "./scraps/Trip";
-import "../styles.css";
+import "../styles/scraps.css";
 
 export default function Scraps({ selectedFilters }) {
   const [scraps, setScraps] = useState([]);
@@ -49,16 +49,21 @@ export default function Scraps({ selectedFilters }) {
 
   return (
     <section id="scraps">
-      {filteredScraps.length > 0 ? (
-        filteredScraps.map((scrap, index) => (
-          <div key={index} className="scrap-preview">
-            <img
-              src={scrap.img}
-              alt={`Scrap ${index}`}
-              onClick={() => handleImageClick(scrap)}
-            />
-          </div>
-        ))
+      {selectedFilters.length > 0 ? (
+        filteredScraps.length > 0 ? (
+          filteredScraps.map((scrap, index) => (
+            <div key={index} className="scrap-preview">
+              <img
+                src={scrap.img}
+                alt={`Scrap ${index}`}
+                onClick={() => handleImageClick(scrap)}
+              />
+              <h2>{scrap.name}</h2>
+            </div>
+          ))
+        ) : (
+          <p>No scraps, make some!</p>
+        )
       ) : (
         <p>No filters selected</p>
       )}

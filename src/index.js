@@ -1,7 +1,7 @@
 // import React, { useEffect } from 'react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import App from './App.jsx';
 
 // // List of fonts to randomly select from
