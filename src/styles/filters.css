@@ -3,15 +3,23 @@
   src: url("../assets/fonts/Chillax-Variable.ttf") format("truetype");
 }
 
+menu {
+  margin-inline-end: 40px;
+}
+
 #filters {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  max-width: 90vw;
+  flex-wrap: wrap;
 }
 
 li {
   list-style-type: none;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   padding-left: 5px;
   padding-right: 5px;
   border: 1px solid #ac8670;
