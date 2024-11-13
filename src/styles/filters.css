@@ -14,7 +14,7 @@ li {
   margin-left: 20px;
   padding-left: 5px;
   padding-right: 5px;
-  border: 1px solid #f0e5cf;
+  border: 1px solid #ac8670;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -23,14 +23,15 @@ li {
   user-select: none;
 }
 
-#selected {
+.selected {
   font-style: bold;
+  border: 1px solid #61624a;
 }
 
 li:hover {
   cursor: pointer;
 }
 
-li img {
+li svg {
   margin-left: 5px;
 }

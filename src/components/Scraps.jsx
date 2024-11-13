@@ -21,6 +21,10 @@ export default function Scraps({ selectedFilters }) {
     setSelectedScrap(scrap);
   };
 
+  const handleCloseOverlay = () => {
+    setSelectedScrap(null);
+  };
+
   const renderScrapComponent = (scrap) => {
     switch (scrap.type) {
       case "Film":
@@ -68,7 +72,7 @@ export default function Scraps({ selectedFilters }) {
         <p>No filters selected</p>
       )}
       {selectedScrap && (
-        <div className="overlay" onClick={() => setSelectedScrap(null)}>
+        <div className="overlay" onClick={handleCloseOverlay}>
           <div className="scrap-overlay" onClick={(e) => e.stopPropagation()}>
             {renderScrapComponent(selectedScrap)}
           </div>

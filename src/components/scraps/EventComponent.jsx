@@ -1,8 +1,9 @@
 import Countdown from "../utils/Countdown";
 
-export default function EventComponent({ name, date, venue, lineup }) {
+export default function EventComponent({ img, name, date, venue, lineup }) {
   return (
     <section className="scrap">
+      <img src={img} alt="Event image" />
       <h2>{name}</h2>
       <p>{date}</p>
       <p>{venue}</p>
