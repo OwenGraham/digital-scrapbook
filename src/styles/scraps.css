@@ -12,12 +12,18 @@
   max-width: 700px;
 }
 
+#scraps p {
+  color: #4e554a;
+  font-size: 18px;
+  font-family: Excon-Variable;
+}
+
 .scrap-preview {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 10px;
+  margin: 3px;
   position: relative;
 }
 
@@ -47,14 +53,10 @@
 
 .scrap {
   /* put the scrap as an overlay in the center of the screen */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
 
-  background-color: rgb(255, 255, 255);
+  background-color: #f0e5cf;
   padding: 17px;
-  width: 330px;
   border: 2px solid #f0e5cf;
 
   display: flex;
@@ -62,6 +64,7 @@
   align-items: center;
   text-align: center;
 
+  color: #4e554a;
   font-family: Excon-Variable;
 }
 
@@ -78,18 +81,37 @@
   background-image: radial-gradient(circle, #f0e5cf 1px, transparent 1px);
   background-size: 10px 10px;
   z-index: 999;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .scrap-overlay {
   background-color: rgb(255, 255, 255);
-  padding: 17px;
-  width: 330px;
+  max-width: 330px;
   border: 2px solid #f0e5cf;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   z-index: 1000;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* WebKit browsers */
+.scrap-overlay::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrap-overlay::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrap-overlay::-webkit-scrollbar-thumb {
+  background-color: #f0e5cf;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
 }
 
 .scrap img {
@@ -98,14 +120,10 @@
   object-fit: contain;
 }
 
-.scrap h1 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 .scrap h2 {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 25px;
 }
 
 .scrap p {
@@ -114,7 +132,8 @@
 }
 
 .scrap div {
-  background: #f0e5cf;
+  background: #ac8670;
+  font-size: 15px;
 }
 
 #star-rating {

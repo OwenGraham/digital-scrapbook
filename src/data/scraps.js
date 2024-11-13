@@ -3,6 +3,9 @@ import makingSenseOfTheTroubles from "../assets/images/making-sense-of-the-troub
 import sling from "../assets/images/sling.jpg";
 import leekPasta from "../assets/images/leek-pasta.jpg";
 import ep1320 from "../assets/images/ep-1320.avif";
+import XCLUB from "../assets/images/XCLUB.jpg";
+import mungos from "../assets/images/mungos-hifi-ramona.jpg";
+import butternutSquashPasta from "../assets/images/butternut-squash-pasta.png";
 
 export const scraps = [
   {
@@ -156,5 +159,28 @@ export const scraps = [
     "director": "Martin Scorsese",
     "releaseYear": 1976,
     "review": "A meadering and uneventful plot driven by captivating characters and iconic visuals, my favourite genre. People like this don't exist in real life, but the acting and dialogue transport you to a world where they do, and you're left grappling with the morals you know to struggle to reason with the characters."
+  },
+  {
+    "img": XCLUB,
+    "type": "Event",
+    "name": "Boomtown Reunion!",
+    "date": "2024-11-16",
+    "venue": "Hidden",
+    "lineup": "X CLUB, Ben Prophet, GFA"
+  },
+  {
+    "img": mungos,
+    "type": "Event",
+    "name": "Ramona Radio Rave x Hit & Run",
+    "date": "2024-12-11",
+    "venue": "Ramona",
+    "lineup": "Mungo's Hi Fi"
+  },
+  {
+    "type": "Recipe",
+    "img": butternutSquashPasta,
+    "name": "Butternut Squash Pasta",
+    "cookingTime": 60,
+    "recipe": "Cut the butternot squash in half down it's length, drizzle it in olive oil and season with salt and pepper and roast until soft. Caramelise onions in a saucepan and add tomato puree and minced garlic. Scoop out the butternut squash and mash it into the pan. Add some vegan cream and pasta water and stir through the pasta."
   }
 ];
