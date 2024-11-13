@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/digital-scrapbook/static/css/main.b001d913.css",
+    "main.css": "/digital-scrapbook/static/css/main.99d681be.css",
     "main.js": "/digital-scrapbook/static/js/main.9f0335e4.js",
     "static/media/butternut-squash-pasta.png": "/digital-scrapbook/static/media/butternut-squash-pasta.80a8f4a00b0c4d96a9d2.png",
     "static/media/leek-pasta.jpg": "/digital-scrapbook/static/media/leek-pasta.b4f747c989853bfab1f5.jpg",
@@ -13,11 +13,11 @@
     "static/media/do-the-right-thing.jpg": "/digital-scrapbook/static/media/do-the-right-thing.3e087ec722babf80aa12.jpg",
     "static/media/making-sense-of-the-troubles.jpg": "/digital-scrapbook/static/media/making-sense-of-the-troubles.96f721878a49d7a7f5a2.jpg",
     "index.html": "/digital-scrapbook/index.html",
-    "main.b001d913.css.map": "/digital-scrapbook/static/css/main.b001d913.css.map",
+    "main.99d681be.css.map": "/digital-scrapbook/static/css/main.99d681be.css.map",
     "main.9f0335e4.js.map": "/digital-scrapbook/static/js/main.9f0335e4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b001d913.css",
+    "static/css/main.99d681be.css",
     "static/js/main.9f0335e4.js"
   ]
 }
