@@ -16,7 +16,7 @@ export default function Album({
       <p>{artist}</p>
       <p>{releaseYear}</p>
       <div>
-        <p>{review}</p>
+        <p className="review">{review}</p>
       </div>
     </section>
   );
