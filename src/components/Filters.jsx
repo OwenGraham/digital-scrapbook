@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import Filter from "./Filter";
 import "../styles/filters.css";
 
 export default function Filters({ selectedFilters, setSelectedFilters }) {
+  useEffect(() => {
+    const filtersElement = document.getElementById("filters");
+    filtersElement.classList.add("fade-in");
+  }, []);
+
   const handleFilterClick = (filter) => {
     if (filter === "All") {
       if (selectedFilters.includes("All")) {
@@ -23,13 +29,11 @@ export default function Filters({ selectedFilters, setSelectedFilters }) {
         const newFilters = prevFilters.includes(filter)
           ? prevFilters.filter((f) => f !== filter)
           : [...prevFilters, filter];
-
         if (newFilters.length === 7 && !newFilters.includes("All")) {
           newFilters.push("All");
         } else if (newFilters.includes("All")) {
           newFilters.splice(newFilters.indexOf("All"), 1);
         }
-
         return newFilters;
       });
     }

@@ -18,7 +18,7 @@ export default function Book({
       <p>{releaseYear}</p>
       <p>{isbn}</p>
       <div>
-        <p>{review}</p>
+        <p className="review">{review}</p>
       </div>
     </section>
   );
