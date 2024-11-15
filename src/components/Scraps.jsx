@@ -66,10 +66,10 @@ export default function Scraps({ selectedFilters }) {
             </div>
           ))
         ) : (
-          <p>No scraps, make some!</p>
+          <p className="no-scraps-message">No scraps, make some!</p>
         )
       ) : (
-        <p>No filters selected</p>
+        <p data-testid="no-filters-message">No filters selected</p>
       )}
       {selectedScrap && (
         <div className="overlay" onClick={handleCloseOverlay}>
