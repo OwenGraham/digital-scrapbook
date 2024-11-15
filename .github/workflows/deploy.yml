@@ -27,6 +27,9 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Set up Playwright
+        run: npx playwright install
+
       - name: Run Playwright tests
         run: npx playwright test
 
