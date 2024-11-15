@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
@@ -24,7 +27,25 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Install browser dependencies
+        run: npx playwright install-deps
+
+      - name: Start the development server
+        run: npm start &
+        env:
+          CI: true
+
+      - name: Wait for the server to be ready
+        run: npx wait-on http://localhost:3000
+
+      - name: Set up Playwright
+        run: npx playwright install
+
+      - name: Run Playwright tests
+        run: npx playwright test
+
       - name: Deploy to GitHub Pages
+        if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

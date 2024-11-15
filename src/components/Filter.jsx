@@ -13,7 +13,11 @@ export default function Filter({ children, onClick, selected }) {
   };
 
   return (
-    <li className={isSelected ? "selected" : ""} onClick={handleClick}>
+    <li
+      data-testid="filter"
+      className={isSelected ? "selected" : ""}
+      onClick={handleClick}
+    >
       {children}
       {isSelected && (
         <svg
