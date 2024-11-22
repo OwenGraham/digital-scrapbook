@@ -181,6 +181,14 @@ export const scraps = [
     "img": butternutSquashPasta,
     "name": "Butternut Squash Pasta",
     "cookingTime": 60,
-    "recipe": "Cut the butternot squash in half down it's length, drizzle it in olive oil and season with salt and pepper and roast until soft. Caramelise onions in a saucepan and add tomato puree and minced garlic. Scoop out the butternut squash and mash it into the pan. Add some vegan cream and pasta water and stir through the pasta."
+    "recipe": "Cut the butternut squash in half down it's length, drizzle it in olive oil and season with salt and pepper and roast until soft. Caramelise onions in a saucepan and add tomato puree and minced garlic. Scoop out the butternut squash and mash it into the pan. Add some vegan cream and pasta water and stir through the pasta."
+  },
+  {
+    "type": "Event",
+    "img": "https://instagram.fbhx4-2.fna.fbcdn.net/v/t39.30808-6/462242038_18042015530511361_225565414377345541_n.jpg?stp=dst-jpg_e35_p720x720&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fbhx4-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=WAxpT2Ha5k8Q7kNvgEpbnWB&_nc_gid=7d8e3d5e37aa4232b80c13753c8183f6&edm=AP4sbd4AAAAA&ccb=7-5&ig_cache_key=MzQ3ODgyODYxODMyMTM1MzQ1Nw%3D%3D.3-ccb7-5&oh=00_AYBlLt7Ikk9UCHHLRmGp3p6IbFE5CXQ21mJg06Ib9uTBrw&oe=6744EE07&_nc_sid=7a9f4b",
+    "name": "Hit & Run presents SUPER SONIC BOOTY BANGERS",
+    "date": "2024-11-29",
+    "venue": "Hidden",
+    "lineup": "Samurai Breaks, Thys, REA, Syntax B2B CLA, T-Man, TRUTHOS MUFASA"
   }
 ];
