@@ -6,6 +6,7 @@ import ep1320 from "../assets/images/ep-1320.avif";
 import XCLUB from "../assets/images/XCLUB.jpg";
 import mungos from "../assets/images/mungos-hifi-ramona.jpg";
 import butternutSquashPasta from "../assets/images/butternut-squash-pasta.png";
+import katsu from "../assets/images/katsu.jpg";
 
 export const scraps = [
   {
@@ -190,5 +191,12 @@ export const scraps = [
     "date": "2024-11-29",
     "venue": "Hidden",
     "lineup": "Samurai Breaks, Thys, REA, Syntax B2B CLA, T-Man, TRUTHOS MUFASA"
+  },
+  {
+    "type": "Recipe",
+    "img": katsu,
+    "name": "Tofu Katsu Curry",
+    "cookingTime": 40,
+    "recipe": "Fry onions until they start to caremalise, add garlic and ginger and cook for a few minutes. Add curry powder and turmeric and cook for a few more minutes. Add coconut milk and stock and simmer for 20 minutes. Blend the sauce. Coat tofu in batter and panko and shallow fry until crispy. Serve with rice."
   }
 ];
