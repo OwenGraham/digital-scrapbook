@@ -215,6 +215,6 @@ export const scraps = [
     "name": "Dead Poets Society",
     "director": "Peter Weir",
     "releaseYear": 1989,
-    "review": "Just so charming and heartwarming. Such a breath of fresh air to actually like and understand the choices of characters I'm meant to relate to in a film. The positive masculnity in this made me want to get the boys together to read eachother poems, and we'll all listen attentatively and aplaud one another. Wonderfully, I have friends who make this not a far cry. Also made me think I would make a great teacher, and I'm so lucky to have parents who encouraged me to do whatever I wanted. Martina recently told me I looked like Ethan Hawke in a phtot, and it's becoming one of my favourite compliments."
+    "review": "Just so charming and heartwarming. So much comfort film potential, and it would probably do me a lot of good to watch this once a year. Such a breath of fresh air to actually like and understand the choices of characters I'm meant to relate to in a film. The positive masculnity in this made me want to get the boys together to read eachother poems, and we'll all listen attentatively and aplaud one another. Wonderfully, I have friends who make this not a far cry. Also made me think I would make a great teacher, and I'm so lucky to have parents who encouraged me to do whatever I wanted. Martina recently told me I looked like Ethan Hawke in a phtot, and it's becoming one of my favourite compliments."
   }
 ];
