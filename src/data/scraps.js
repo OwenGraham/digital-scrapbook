@@ -16,7 +16,7 @@ export const scraps = [
     "name": "Do The Right Thing",
     "director": "Spike Lee",
     "releaseYear": 1989,
-    "review": "A powerful film about racial tensions."
+    "review": "This really helped me understand what I like in a film. On paper I should love some films, but nothing sticks with me and few weeks after watching it's as if I never saw it at all, some films suprise me when i find myself thinking about them for a long time afterward, but this film latched it's self onto me straight away and I knew I'd be comparing so much else to it for a long time. Side note: Spike Lee always casts himself as the most loveable characters."
   },
   {
     "type": "Book",
@@ -26,7 +26,7 @@ export const scraps = [
     "author": "David McKittrick",
     "releaseYear": 2001,
     "isbn": "9781561310708",
-    "review": "An insightful look into the Northern Ireland conflict."
+    "review": "Second attempt at this book, determined to finish it this time as i think it's so important to know about and i wish I wasn't so ignorant. Taking me a while because there are SO MANY names and acronyms. I'll give a better review when I finish."
   },
   {
     "type": "Album",
@@ -59,7 +59,7 @@ export const scraps = [
     "name": "La Haine",
     "director": "Mathieu Kassovitz",
     "releaseYear": 1995,
-    "review": "Love the cinematography and the story."
+    "review": "I'm really discovering the kind of film I love. This fits right into that."
   },
   {
     "type": "Film",
@@ -207,5 +207,14 @@ export const scraps = [
     "artist": "Kendrick Lamar",
     "releaseYear": 2024,
     "review": "Thank you Kendrick for letting me stan Jack Antonoff without being embarassed."
+  },
+  {
+    "type": "Film",
+    "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT6VlN70gPF17NME9EjCEeX1zIE8oW3wAl1Lzj_W9VCBqLbsATYCU_lHH4aNdFNF4Q8UU12WQ",
+    "rating": 4,
+    "name": "Dead Poets Society",
+    "director": "Peter Weir",
+    "releaseYear": 1989,
+    "review": "Just so charming and heartwarming. Such a breath of fresh air to actually like and understand the choices of characters I'm meant to relate to in a film. The positive masculnity in this made me want to get the boys together to read eachother poems, and we'll all listen attentatively and aplaud one another. Wonderfully, I have friends who make this not a far cry. Also made me think I would make a great teacher, and I'm so lucky to have parents who encouraged me to do whatever I wanted. Martina recently told me I looked like Ethan Hawke in a phtot, and it's becoming one of my favourite compliments."
   }
 ];
