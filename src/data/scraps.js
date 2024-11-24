@@ -215,6 +215,22 @@ export const scraps = [
     "name": "Dead Poets Society",
     "director": "Peter Weir",
     "releaseYear": 1989,
-    "review": "Just so charming and heartwarming. So much comfort film potential, and it would probably do me a lot of good to watch this once a year. Such a breath of fresh air to actually like and understand the choices of characters I'm meant to relate to in a film. The positive masculnity in this made me want to get the boys together to read eachother poems, and we'll all listen attentatively and aplaud one another. Wonderfully, I have friends who make this not a far cry. Also made me think I would make a great teacher, and I'm so lucky to have parents who encouraged me to do whatever I wanted. Martina recently told me I looked like Ethan Hawke in a phtot, and it's becoming one of my favourite compliments."
+    "review": "Just so charming and heartwarming. So much comfort film potential, and it would probably do me a lot of good to watch this once a year. Such a breath of fresh air to actually like and understand the choices of characters I'm meant to relate to in a film. The positive masculnity in this made me want to get the boys together to read eachother poems, and we'll all listen attentatively and aplaud one another. Wonderfully, I have friends who make this not a far cry. Also made me think I would make a great teacher, and I'm so lucky to have parents who encouraged me to do whatever I wanted. Martina recently told me I looked like Ethan Hawke in a photo, and it's becoming one of my favourite compliments."
+  },
+  {
+    "img": "https://pushpushww.com/cdn/shop/files/ScreenShot2024-06-01at15.56.04_33b674b6-4bc3-4e1c-ab56-a453dbe06298.png?v=1717561718&width=1470", 
+    "type": "Wishlist",
+    "name": "Stripes Pants",
+    "brand": "Push Push",
+    "price": 47,
+    "link": "https://pushpushww.com/collections/pants/products/pp-stripes-pants-pre-order"
+  },
+  {
+    "img": "https://r2.gear4music.com/media/53/533335/1200/preview_1.jpg", 
+    "type": "Wishlist",
+    "name": "TD-3-AM",
+    "brand": "Behringer",
+    "price": 89,
+    "link": "https://www.gear4music.com/Keyboards-and-Pianos/Behringer-TD-3-AM-Analog-Bass-Line-Synthesizer-LTD-Yellow/3A8Y?origin=product-ads&gad_source=1&gclid=Cj0KCQiAuou6BhDhARIsAIfgrn6Tcq-mIN6mDRWPubhQi0By6MQA8rRbSsUj6X6WziqO5fAi2pYZkVEaAv1UEALw_wcB"
   }
 ];
