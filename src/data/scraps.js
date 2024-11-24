@@ -197,6 +197,15 @@ export const scraps = [
     "img": katsu,
     "name": "Tofu Katsu Curry",
     "cookingTime": 40,
-    "recipe": "Fry onions until they start to caremalise, add garlic and ginger and cook for a few minutes. Add curry powder and turmeric and cook for a few more minutes. Add coconut milk and stock and simmer for 20 minutes. Blend the sauce. Coat tofu in batter and panko and shallow fry until crispy. Serve with rice."
+    "recipe": "Fry onions until they start to caremalise, add garlic and ginger and cook for a few minutes. Add curry powder and turmeric and cook for a few more minutes. Add coconut milk, stock, and agave nectar and simmer for 20 minutes. Blend the sauce. Coat tofu in batter and panko and shallow fry until crispy. Serve with rice."
+  },
+  {
+    "type": "Album",
+    "img": "https://best-fit.transforms.svdcdn.com/production/albums/Kendrick-Lamar-GNX-cover.jpg?w=469&h=469&q=100&auto=format&fit=crop&dm=1732353435&s=d8eebc757decc24a11a0d89b3cc31b5b",
+    "rating": 4,
+    "name": "GNX",
+    "artist": "Kendrick Lamar",
+    "releaseYear": 2024,
+    "review": "Thank you Kendrick for letting me stan Jack Antonoff without being embarassed."
   }
 ];
