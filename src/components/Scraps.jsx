@@ -56,11 +56,10 @@ export default function Scraps({ selectedFilters }) {
       {selectedFilters.length > 0 ? (
         filteredScraps.length > 0 ? (
           filteredScraps.map((scrap, index) => (
-            <div key={index} className="scrap-preview">
+            <div key={index} className="scrap-preview" onClick={() => handleImageClick(scrap)}>
               <img
                 src={scrap.img}
                 alt={`Scrap ${index}`}
-                onClick={() => handleImageClick(scrap)}
               />
               <h2>{scrap.name}</h2>
             </div>
