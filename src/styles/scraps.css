@@ -152,7 +152,7 @@
 }
 
 .scrap div {
-  width: fill;
+  width: stretch;
   align-items: flex-start;
 }
 
