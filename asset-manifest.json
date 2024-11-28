@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/digital-scrapbook/static/css/main.112089e6.css",
-    "main.js": "/digital-scrapbook/static/js/main.d79c7216.js",
+    "main.css": "/digital-scrapbook/static/css/main.cab41492.css",
+    "main.js": "/digital-scrapbook/static/js/main.3fb2ba50.js",
     "static/media/butternut-squash-pasta.png": "/digital-scrapbook/static/media/butternut-squash-pasta.80a8f4a00b0c4d96a9d2.png",
     "static/media/leek-pasta.jpg": "/digital-scrapbook/static/media/leek-pasta.b4f747c989853bfab1f5.jpg",
     "static/media/SSBB.jpg": "/digital-scrapbook/static/media/SSBB.89e8bf2df3749d86e086.jpg",
@@ -16,11 +16,11 @@
     "static/media/do-the-right-thing.jpg": "/digital-scrapbook/static/media/do-the-right-thing.3e087ec722babf80aa12.jpg",
     "static/media/making-sense-of-the-troubles.jpg": "/digital-scrapbook/static/media/making-sense-of-the-troubles.96f721878a49d7a7f5a2.jpg",
     "index.html": "/digital-scrapbook/index.html",
-    "main.112089e6.css.map": "/digital-scrapbook/static/css/main.112089e6.css.map",
-    "main.d79c7216.js.map": "/digital-scrapbook/static/js/main.d79c7216.js.map"
+    "main.cab41492.css.map": "/digital-scrapbook/static/css/main.cab41492.css.map",
+    "main.3fb2ba50.js.map": "/digital-scrapbook/static/js/main.3fb2ba50.js.map"
   },
   "entrypoints": [
-    "static/css/main.112089e6.css",
-    "static/js/main.d79c7216.js"
+    "static/css/main.cab41492.css",
+    "static/js/main.3fb2ba50.js"
   ]
 }
