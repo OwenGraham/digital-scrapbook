@@ -9,7 +9,7 @@ import EventComponent from "./scraps/EventComponent";
 import Trip from "./scraps/Trip";
 import "../styles/scraps.css";
 
-export default function Scraps({ selectedFilters }) {
+export default function Scraps({ selectedFilters, sortMode }) {
   const [scraps, setScraps] = useState([]);
   const [selectedScrap, setSelectedScrap] = useState(null);
 
@@ -51,11 +51,13 @@ export default function Scraps({ selectedFilters }) {
       selectedFilters.includes("All") || selectedFilters.includes(scrap.type)
   );
 
+  const sortedScraps = sortMode === "newToOld" ? filteredScraps.reverse() : filteredScraps;
+
   return (
     <section id="scraps">
       {selectedFilters.length > 0 ? (
-        filteredScraps.length > 0 ? (
-          filteredScraps.map((scrap, index) => (
+        sortedScraps.length > 0 ? (
+          sortedScraps.map((scrap, index) => (
             <div key={index} className="scrap-preview" onClick={() => handleImageClick(scrap)}>
               <img
                 src={scrap.img}
