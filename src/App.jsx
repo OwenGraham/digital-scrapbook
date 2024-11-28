@@ -5,7 +5,7 @@ import Scraps from "./components/Scraps.jsx";
 
 function App() {
   const [selectedFilters, setSelectedFilters] = useState([]);
-  const [sortMode, setSortMode] = useState("oldToNew");
+  const [sortMode, setSortMode] = useState("newToOld");
 
   return (
     <div id="app">

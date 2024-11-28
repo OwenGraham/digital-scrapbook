@@ -8,6 +8,7 @@ import mungos from "../assets/images/mungos-hifi-ramona.jpg";
 import butternutSquashPasta from "../assets/images/butternut-squash-pasta.png";
 import katsu from "../assets/images/katsu.jpg";
 import ssbb from "../assets/images/SSBB.jpg";
+import NeffaT from "../assets/images/NeffaT.jpg";
 
 export const scraps = [
   {
@@ -233,5 +234,13 @@ export const scraps = [
     "brand": "Behringer",
     "price": 89,
     "link": "https://www.gear4music.com/Keyboards-and-Pianos/Behringer-TD-3-AM-Analog-Bass-Line-Synthesizer-LTD-Yellow/3A8Y?origin=product-ads&gad_source=1&gclid=Cj0KCQiAuou6BhDhARIsAIfgrn6Tcq-mIN6mDRWPubhQi0By6MQA8rRbSsUj6X6WziqO5fAi2pYZkVEaAv1UEALw_wcB"
+  },
+  {
+    "type": "Event",
+    "img": NeffaT,
+    "name": "23 Degrees x Hidden",
+    "date": "2024-12-06",
+    "venue": "Hidden",
+    "lineup": "Neffa-T, Mange Saint Hilare, Soul Mass Transit System, Dr Dubplate, Bullet Tooth B2B Auramatic, Chinese Daughter Vxrgo, Silva Snipe Selectacee, Shadev Ft P1 Caps Hanz, Nora, MLC"
   }
 ];

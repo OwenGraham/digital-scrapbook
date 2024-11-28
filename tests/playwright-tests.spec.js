@@ -25,6 +25,11 @@ test.describe("Check initial state of page after load", () => {
     test("No scrap previews should be shown", async ({ page }) => {
         await expect(page.locator(".scrap-preview")).not.toBeVisible();
     });
+
+    test("sort dropdown should be set to 'New to Old'", async ({ page }) => {
+        const sortDropdown = await page.locator("#sortBy");
+        await expect(sortDropdown).toHaveValue("newToOld");
+    });
 });
 
 test.describe("Check filter functionality", () => {
@@ -53,6 +58,15 @@ test.describe("Check filter functionality", () => {
         await filter.click();
         await filter.click();
         await expect(page.locator(".scrap-preview")).toHaveCount(0);
+    });
+
+    test("the sort mode menu should show the selected sort mode", async ({ page }) => {
+        const sortDropdown = await page.locator("#sortBy");
+        await sortDropdown.selectOption({ label: "Old to new" });
+        await expect(sortDropdown).toHaveValue("oldToNew");
+
+        await sortDropdown.selectOption({ label: "New to old" });
+        await expect(sortDropdown).toHaveValue("newToOld");
     });
 });
 
