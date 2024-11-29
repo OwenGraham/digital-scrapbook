@@ -13,6 +13,11 @@ test.describe("Check initial state of page after load", () => {
         await expect(page.getByTestId("no-filters-message")).toHaveText("No filters selected");
     });
 
+    test("All filters should be visible on the page", async ({ page }) => {
+        const filters = await page.locator("[data-testid='filter']");
+        await expect(filters).toHaveText(["All", "Events", "Wishlist", "Films", "Books", "Albums", "Recipes", "Trips"]);
+    });
+
     test("All filters should be not selected", async ({ page }) => {
         const filters = await page.locator("[data-testid='filter']");
         const count = await filters.count();
@@ -54,6 +59,30 @@ test.describe("Check filter functionality", () => {
         await filter.click();
         await expect(page.locator(".scrap-preview")).toHaveCount(0);
     });
+
+    test("selecting the all filter should select all filters", async ({ page }) => {
+        const filters = page.getByTestId("filter");
+        await filters.filter({hasText: "All"}).click();
+        for(let i = 1; i < filters.length; i++) {
+            await expect(filters[i]).toHaveClass("selected");
+        }
+    })
+
+    test("deselecting the all filter should deselect all filters", async ({ page }) => {
+        const filters = page.getByTestId("filter");
+        await filters.filter({hasText: "All"}).click();
+        await filters.filter({hasText: "All"}).click();
+        for(let i = 1; i < filters.length; i++) {
+            await expect(filters[i]).not.toHaveClass("selected");
+        }
+    })
+
+    test("deselcting a filter should deselect the all filter", async ({ page }) => {
+        const filters = page.getByTestId("filter");
+        await filters.filter({hasText: "All"}).click();
+        await filters.filter({hasText: "Films"}).click();
+        await expect(filters.filter({hasText: "All"})).not.toHaveClass("selected");
+    })
 });
 
 test.describe("Check scrap preview functionality", () => {
