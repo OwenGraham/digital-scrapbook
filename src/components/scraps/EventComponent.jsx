@@ -9,7 +9,12 @@ export default function EventComponent({ img, name, date, venue, lineup }) {
       <p>{venue}</p>
       <Countdown targetDate={date} />
       <div>
-        <p>{lineup}</p>
+        <h3>Lineup</h3>
+        <ul>
+          {lineup.map((artist, index) => (
+            <li key={index}>{artist}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );

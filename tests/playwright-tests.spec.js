@@ -13,6 +13,11 @@ test.describe("Check initial state of page after load", () => {
         await expect(page.getByTestId("no-filters-message")).toHaveText("No filters selected");
     });
 
+    test("All filters should be visible on the page", async ({ page }) => {
+        const filters = await page.locator("[data-testid='filter']");
+        await expect(filters).toHaveText(["All", "Events", "Wishlist", "Films", "Books", "Albums", "Recipes", "Trips"]);
+    });
+
     test("All filters should be not selected", async ({ page }) => {
         const filters = await page.locator("[data-testid='filter']");
         const count = await filters.count();
@@ -68,6 +73,30 @@ test.describe("Check filter functionality", () => {
         await sortDropdown.selectOption({ label: "New to old" });
         await expect(sortDropdown).toHaveValue("newToOld");
     });
+
+    test("selecting the all filter should select all filters", async ({ page }) => {
+        const filters = page.getByTestId("filter");
+        await filters.filter({hasText: "All"}).click();
+        for(let i = 1; i < filters.length; i++) {
+            await expect(filters[i]).toHaveClass("selected");
+        }
+    })
+
+    test("deselecting the all filter should deselect all filters", async ({ page }) => {
+        const filters = page.getByTestId("filter");
+        await filters.filter({hasText: "All"}).click();
+        await filters.filter({hasText: "All"}).click();
+        for(let i = 1; i < filters.length; i++) {
+            await expect(filters[i]).not.toHaveClass("selected");
+        }
+    })
+
+    test("deselcting a filter should deselect the all filter", async ({ page }) => {
+        const filters = page.getByTestId("filter");
+        await filters.filter({hasText: "All"}).click();
+        await filters.filter({hasText: "Films"}).click();
+        await expect(filters.filter({hasText: "All"})).not.toHaveClass("selected");
+    })
 });
 
 test.describe("Check scrap preview functionality", () => {
@@ -87,5 +116,27 @@ test.describe("Check scrap preview functionality", () => {
             await page.mouse.click(boundingBox.x - 10, boundingBox.y - 10);
         }
         await expect(page.locator(".scrap")).not.toBeVisible();
+    });
+});
+
+test.describe("Check scrap data", () => {
+    test.beforeEach(async ({ page}) => {
+        await page.getByText("Films").click();
+        await page.locator("#sortBy").selectOption({ label: "Old to new" });
+        await page.locator(".scrap-preview").first().click(); 
+    });
+
+    test("Check that the correct film data is displayed", async ({ page }) => {
+        const scrap = await page.locator(".scrap");
+        const title = await scrap.getByTestId("name").innerText();
+        expect(title).toBe("Do The Right Thing");
+
+        const director = await page.getByTestId("director").innerText();
+        expect(director).toBe("Spike Lee");
+
+        const releaseYear = await page.getByTestId("release-year").innerText();
+        expect(releaseYear).toBe("1989");
+
+        const stars = page.locator("#star-rating label svg");
     });
 });

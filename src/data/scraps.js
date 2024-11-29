@@ -44,7 +44,8 @@ export const scraps = [
     "img": leekPasta,
     "name": "Leek Pasta",
     "cookingTime": 30,
-    "recipe": "Ingredients:- Butter - Leeks - Garlic - Double cream - Milk - Cheese - Nutmeg - Pasta Recipe: 1) Melt butter in pan 2) Add chopped leaks and cook until soft 3) Add garlic and cook for 2 mins 4) Add cream and milk 5) Add cheese and nutmeg and let melt 6) Add pasta water 7) Stir in pasta 8) Season with salt, pepper, pecorrino, olive oil "
+    "ingredients": ["Butter", "Leeks", "Garlic", "Double cream", "Milk", "Cheese", "Nutmeg", "Pasta"],
+    "recipe": ["Melt butter in pan", "Add chopped leaks and cook until soft", "Add garlic and cook for 2 mins", "Add cream and milk", "Add cheese and nutmeg and let melt", "Add pasta water", "Stir in pasta", "Season with salt, pepper, pecorrino, olive oil"]
   },
   {
     "img": ep1320, 
@@ -169,7 +170,7 @@ export const scraps = [
     "name": "Boomtown Reunion!",
     "date": "2024-11-16",
     "venue": "Hidden",
-    "lineup": "X CLUB, Ben Prophet, GFA"
+    "lineup": ["X CLUB", "Ben Prophet", "GFA"]
   },
   {
     "img": mungos,
@@ -177,14 +178,15 @@ export const scraps = [
     "name": "Ramona Radio Rave x Hit & Run",
     "date": "2024-12-11",
     "venue": "Ramona",
-    "lineup": "Mungo's Hi Fi"
+    "lineup": ["Mungo's Hi Fi"]
   },
   {
     "type": "Recipe",
     "img": butternutSquashPasta,
     "name": "Butternut Squash Pasta",
     "cookingTime": 60,
-    "recipe": "Cut the butternut squash in half down it's length, drizzle it in olive oil and season with salt and pepper and roast until soft. Caramelise onions in a saucepan and add tomato puree and minced garlic. Scoop out the butternut squash and mash it into the pan. Add some vegan cream and pasta water and stir through the pasta."
+    "ingredients": ["Butternut squash", "Olive oil", "Salt", "Pepper", "Onion", "Tomato puree", "Garlic", "Vegan cream", "Pasta"],
+    "recipe": ["Cut the butternut squash in half down it's length, drizzle it in olive oil and season with salt and pepper and roast until soft.", "Caramelise onions in a saucepan and add tomato puree and minced garlic.", "Scoop out the butternut squash and mash it into the pan.", "Add some vegan cream and pasta water and stir through the pasta."]
   },
   {
     "type": "Event",
@@ -192,14 +194,15 @@ export const scraps = [
     "name": "Hit & Run presents SUPER SONIC BOOTY BANGERS",
     "date": "2024-11-29",
     "venue": "Hidden",
-    "lineup": "Samurai Breaks, Thys, REA, Syntax B2B CLA, T-Man, TRUTHOS MUFASA"
+    "lineup": ["Samurai Breaks", "Thys", "REA", "Syntax B2B CLA", "T-Man", "TRUTHOS MUFASA"]
   },
   {
     "type": "Recipe",
     "img": katsu,
     "name": "Tofu Katsu Curry",
     "cookingTime": 40,
-    "recipe": "Fry onions until they start to caremalise, add garlic and ginger and cook for a few minutes. Add curry powder and turmeric and cook for a few more minutes. Add coconut milk, stock, and agave nectar and simmer for 20 minutes. Blend the sauce. Coat tofu in batter and panko and shallow fry until crispy. Serve with rice."
+    "ingredients": ["Onion", "Garlic", "Ginger", "Curry powder", "Turmeric", "Coconut milk", "Stock", "Agave nectar", "Tofu", "Panko", "Rice"],
+    "recipe": ["Fry onions until they start to caremalise", "Add garlic and ginger and cook for a few minutes.", "Add curry powder and turmeric and cook for a few more minutes.", "Add coconut milk, stock, and agave nectar and simmer for 20 minutes.", "Blend the sauce.", "Coat tofu in batter and panko and shallow fry until crispy.", "Serve with rice."]
   },
   {
     "type": "Album",
@@ -241,6 +244,6 @@ export const scraps = [
     "name": "23 Degrees x Hidden",
     "date": "2024-12-06",
     "venue": "Hidden",
-    "lineup": "Neffa-T, Mange Saint Hilare, Soul Mass Transit System, Dr Dubplate, Bullet Tooth B2B Auramatic, Chinese Daughter Vxrgo, Silva Snipe Selectacee, Shadev Ft P1 Caps Hanz, Nora, MLC"
+    "lineup": ["Neffa-T", "Mange Saint Hilare", "Soul Mass Transit System", "Dr Dubplate", "Bullet Tooth B2B Auramatic", "Chinese Daughter Vxrgo", "Silva Snipe Selectacee", "Shadev Ft P1 Caps Hanz", "Nora", "MLC"]
   }
 ];
