@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Filter from "./Filter";
-import DropDownFilter from "./DropDownFilter";
+// import DropDownFilter from "./DropDownFilter";
 import "../styles/filters.css";
 
 export default function Filters({ selectedFilters, setSelectedFilters, sortMode, setSortMode }) {
