@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Filter from "./Filter";
+import DropDownFilter from "./DropDownFilter";
 import "../styles/filters.css";
 
 export default function Filters({ selectedFilters, setSelectedFilters, sortMode, setSortMode }) {
@@ -51,6 +52,7 @@ export default function Filters({ selectedFilters, setSelectedFilters, sortMode,
       >
         All
       </Filter>
+      {/* <DropDownFilter>events</DropDownFilter> */}
       <Filter
         onClick={() => handleFilterClick("Event")}
         selected={selectedFilters.includes("Event")}

@@ -12,9 +12,9 @@ export default function Film({
     <section className="scrap">
       <img src={img} alt="Cover for film" />
       <StarRating rating={rating} />
-      <h2>{name}</h2>
-      <p>{director}</p>
-      <p>{releaseYear}</p>
+      <h2 data-testid="name">{name}</h2>
+      <p data-testid="director">{director}</p>
+      <p data-testid="release-year">{releaseYear}</p>
       <div>
         <p className="review">{review}</p>
       </div>
