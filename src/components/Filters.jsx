@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Filter from "./Filter";
 import "../styles/filters.css";
 
-export default function Filters({ selectedFilters, setSelectedFilters }) {
+export default function Filters({ selectedFilters, setSelectedFilters, sortMode, setSortMode }) {
   useEffect(() => {
     const filtersElement = document.getElementById("filters");
     filtersElement.classList.add("fade-in");
@@ -37,6 +37,10 @@ export default function Filters({ selectedFilters, setSelectedFilters }) {
         return newFilters;
       });
     }
+  };
+
+  const handleSortChange = (event) => {
+    setSortMode(event.target.value);
   };
 
   return (
@@ -89,6 +93,10 @@ export default function Filters({ selectedFilters, setSelectedFilters }) {
       >
         Trips
       </Filter>
+      <select name="sortBy" id="sortBy" value={sortMode} onChange={handleSortChange}>
+        <option value="oldToNew">Old to new</option>
+        <option value="newToOld">New to old</option>
+      </select>
     </menu>
   );
 }

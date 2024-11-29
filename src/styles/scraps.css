@@ -148,6 +148,16 @@
 .scrap p {
   margin-top: 2px;
   margin-bottom: 2px;
+  text-align: left;
+}
+
+.scrap div {
+  width: stretch;
+  align-items: flex-start;
+}
+
+.scrap li {
+  text-align: left;
 }
 
 .scrap .review {

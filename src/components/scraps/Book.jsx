@@ -6,7 +6,6 @@ export default function Book({
   name,
   author,
   releaseYear,
-  isbn,
   review,
 }) {
   return (
@@ -16,7 +15,6 @@ export default function Book({
       <h2>{name}</h2>
       <p>{author}</p>
       <p>{releaseYear}</p>
-      <p>{isbn}</p>
       <div>
         <p className="review">{review}</p>
       </div>
