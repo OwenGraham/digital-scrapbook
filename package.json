@@ -1,4 +1,4 @@
- {
+{
   "name": "digital-scrapbook",
   "version": "0.1.0",
   "private": true,
@@ -39,7 +39,7 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.48.2",
+    "@playwright/test": "^1.49.0",
     "@types/node": "^22.9.0",
     "gh-pages": "^6.2.0"
   }
