@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { scraps as scrapsList } from "../data/scraps";
 import Film from "./scraps/Film";
 import Book from "./scraps/Book";
 import Album from "./scraps/Album";
@@ -14,7 +13,10 @@ export default function Scraps({ selectedFilters, sortMode }) {
   const [selectedScrap, setSelectedScrap] = useState(null);
 
   useEffect(() => {
-    setScraps(scrapsList);
+    fetch("http://localhost:8080/api/scraps")
+      .then((response) => response.json())
+      .then((data) => setScraps(data))
+      .catch((error) => console.error("Error fetching scraps:", error));
   }, []);
 
   const handleImageClick = (scrap) => {
@@ -27,19 +29,19 @@ export default function Scraps({ selectedFilters, sortMode }) {
 
   const renderScrapComponent = (scrap) => {
     switch (scrap.type) {
-      case "Film":
+      case "FILM":
         return <Film {...scrap} />;
-      case "Book":
+      case "BOOK":
         return <Book {...scrap} />;
-      case "Album":
+      case "ALBUM":
         return <Album {...scrap} />;
-      case "Recipe":
+      case "RECIPE":
         return <Recipe {...scrap} />;
-      case "Wishlist":
+      case "WISHLIST":
         return <Wishlist {...scrap} />;
-      case "Event":
+      case "EVENT":
         return <EventComponent {...scrap} />;
-      case "Trip":
+      case "TRIP":
         return <Trip {...scrap} />;
       default:
         return null;
@@ -51,18 +53,20 @@ export default function Scraps({ selectedFilters, sortMode }) {
       selectedFilters.includes("All") || selectedFilters.includes(scrap.type)
   );
 
-  const sortedScraps = sortMode === "newToOld" ? filteredScraps.reverse() : filteredScraps;
+  const sortedScraps =
+    sortMode === "newToOld" ? filteredScraps.reverse() : filteredScraps;
 
   return (
     <section id="scraps">
       {selectedFilters.length > 0 ? (
         sortedScraps.length > 0 ? (
           sortedScraps.map((scrap, index) => (
-            <div key={index} className="scrap-preview" onClick={() => handleImageClick(scrap)}>
-              <img
-                src={scrap.img}
-                alt={`Scrap ${index}`}
-              />
+            <div
+              key={index}
+              className="scrap-preview"
+              onClick={() => handleImageClick(scrap)}
+            >
+              <img src={scrap.img} alt={`Scrap ${index}`} />
               <h2>{scrap.name}</h2>
             </div>
           ))

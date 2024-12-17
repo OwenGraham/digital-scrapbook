@@ -16,7 +16,7 @@ function App() {
         sortMode={sortMode}
         setSortMode={setSortMode}
       />
-      <Scraps selectedFilters={selectedFilters} sortMode={sortMode}/>
+      <Scraps selectedFilters={selectedFilters} sortMode={sortMode} />
     </div>
   );
 }
