@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./styles/app.css";
 import Filters from "./components/Filters.jsx";
 import Scraps from "./components/Scraps.jsx";
+import NewScrap from "./components/add-scrap/AddScrap.jsx";
 
 function App() {
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -17,6 +18,7 @@ function App() {
         setSortMode={setSortMode}
       />
       <Scraps selectedFilters={selectedFilters} sortMode={sortMode} />
+      <NewScrap />
     </div>
   );
 }
