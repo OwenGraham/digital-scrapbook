@@ -1,11 +1,46 @@
 [
   {
+    "name": "Do The Right Thing",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnPvdyT-kG4lQu9LhHB506bRw5j9XOpMUUUg&s",
+    "director": "Spike Lee",
+    "releaseYear": 1989,
+    "rating": 5,
+    "review": "This really helped me understand what I like in a film. On paper I should love some films, but nothing sticks with me and few weeks after watching it's as if I never saw it at all, some films suprise me when i find myself thinking about them for a long time afterward, but this film latched it's self onto me straight away and I knew I'd be comparing so much else to it for a long time. Side note: Spike Lee always casts himself as the most loveable characters.",
+    "type": "FILM"
+  },
+  {
+    "name": "Making Sense of the Troubles",
+    "img": "https://cdn.waterstones.com/bookjackets/large/9780/2419/9780241962657.jpg",
+    "author": "David McKittrick & David McVea",
+    "releaseYear": 2001,
+    "rating": 3,
+    "review": "Really really comprehensive and important and I'm so glad I read it, but that doesn't mean it wasn't a slog with all the similar acronyms and names.",
+    "type": "BOOK"
+  },
+  {
+    "name": "Sling",
+    "img": "https://cdn.shopify.com/s/files/1/0535/1453/5098/products/1_adff2fb1-b596-4e6d-a1b0-a76aa2179ad4.jpg?v=1626538459",
+    "artist": "Clairo",
+    "releaseYear": 2021,
+    "rating": 3,
+    "review": "Re-entering this data in a newer version of this app and I feel like I can't just copy across the old review for this because it was too rushed and apathetic and I've since grown to really love Clairo. I cant deny this album has few songs I regularly bump though.",
+    "type": "ALBUM"
+  },
+  {
+    "name": "EP-1320 Medieval",
+    "img": "https://westenddj.co.uk/cdn/shop/files/EP_1320medieval_front.jpg?v=1722864660",
+    "brand": "Teenage Engineering",
+    "price": 299,
+    "link": "https://teenage.engineering/products/ep-1320",
+    "type": "WISHLIST"
+  },
+  {
     "name": "La Haine",
     "img": "https://yc.cldmlk.com/jrvyz6cav5m2kaq1mqmsb7ag7r/uploads/vertical_d74dac80-9a59-4611-b340-6c256b0cb334.jpg",
     "director": "Mathieu Kassovitz",
     "releaseYear": 1995,
     "rating": 4,
-    "review": "I'm really discovering the kind of FILM I love. This fits right into that.",
+    "review": "I'm really discovering the kind of film I love. This fits right into that.",
     "type": "FILM"
   },
   {
@@ -14,7 +49,7 @@
     "director": "Martin McDonagh",
     "releaseYear": 2008,
     "rating": 3,
-    "review": "Very fun and silly. Cool to see Collin Farrell and Brendan Gleeson in a FILM so different to Banshees of Inesherin. Maybe didn't live up to the hype though.",
+    "review": "Very fun and silly. Cool to see Collin Farrell and Brendan Gleeson in a film so different to Banshees of Inesherin. Maybe didn't live up to the hype though.",
     "type": "FILM"
   },
   {
@@ -23,11 +58,11 @@
     "author": "E.M. Forster",
     "releaseYear": 1970,
     "rating": 4,
-    "review": "My second classic, after Dorian Grey. I could say lots more about this BOOK than I can be bothered to write here. The beginning, and Maurice falling in love with Clive, was very sweet and relatable. Later parts of the story gave more social commentary than I expected, as I found with Dorian Grey. I particularily liked the afternote, and it's description of how the story ignored WW2 and was set in the last time when it was possible to \"run into the hills\" in England.",
+    "review": "My second classic, after Dorian Grey. I could say lots more about this book than I can be bothered to write here. The beginning, and Maurice falling in love with Clive, was very sweet and relatable. Later parts of the story gave more social commentary than I expected, as I found with Dorian Grey. I particularily liked the afternote, and it's description of how the story ignored WW2 and was set in the last time when it was possible to \"run into the hills\" in England.",
     "type": "BOOK"
   },
   {
-    "name": "The Lord pf the Rings: The Appendices",
+    "name": "The Lord of the Rings: The Appendices",
     "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1330965881i/10807253.jpg",
     "author": "J.R.R. Tolkien",
     "releaseYear": 1955,
@@ -50,7 +85,7 @@
     "director": "Francis Ford Coppola",
     "releaseYear": 1972,
     "rating": 4,
-    "review": "Finally got round to this now it's on streaming. Maybbee didn't quite live up to the hype but only since that's a very tall order for a FILM often quoted as the GOAT. I did however really enjoy it, and it's grown on me even more since watching it.",
+    "review": "Finally got round to this now it's on streaming. Maybbee didn't quite live up to the hype but only since that's a very tall order for a film often quoted as the GOAT. I did however really enjoy it, and it's grown on me even more since watching it.",
     "type": "FILM"
   },
   {
@@ -59,7 +94,7 @@
     "director": "James L. Brooks",
     "releaseYear": 1997,
     "rating": 3,
-    "review": "A recomendation from Martina. Really fun, great characters ,Jack Nicholson was great. Suprised how much the FILM made me laugh out loud. Some of the jokes would not fly today but I don't know if you could make an actual case against them today, I guess just not needed.",
+    "review": "A recomendation from Martina. Really fun, great characters ,Jack Nicholson was great. Suprised how much the film made me laugh out loud. Some of the jokes would not fly today but I don't know if you could make an actual case against them today, I guess just not needed.",
     "type": "FILM"
   },
   {
@@ -85,7 +120,7 @@
     "director": "Armando Iannucci",
     "releaseYear": 2017,
     "rating": 3,
-    "review": "Great cast and could tell they had a lot of fun making it. I correctly guessed that my mum was a fan of it, and she hates most FILMs. I did really enjoy it, but it got a bit tired towards the end.",
+    "review": "Great cast and could tell they had a lot of fun making it. I correctly guessed that my mum was a fan of it, and she hates most films. I did really enjoy it, but it got a bit tired towards the end.",
     "type": "FILM"
   },
   {
@@ -94,7 +129,7 @@
     "director": "Tim Mielants",
     "releaseYear": 2024,
     "rating": 3,
-    "review": "Had nothing to do on a Saturday night and so decided to take my parents to the cinema, and this was the only thing showing that drew me in. The FILM was very slow, but I enjoyed Cillian Murphy, the setting (similar to Starve Acre in a way, I enjoy the familiarity), and the cinematography were great. However, I feel stupid to admit that I was pretty confused throughout the FILM and needed my mum to explain it afterwards, as I had never heard of the Magdalene Laundries. I think in a way I satisfied some of the motivation behind Cillian making this FILM as the debut of his studio, as when I got home I read the Wikipedia page for the Magdalene laundries and did some learning. Horrific stuff.",
+    "review": "Had nothing to do on a Saturday night and so decided to take my parents to the cinema, and this was the only thing showing that drew me in. The film was very slow, but I enjoyed Cillian Murphy, the setting (similar to Starve Acre in a way, I enjoy the familiarity), and the cinematography were great. However, I feel stupid to admit that I was pretty confused throughout the film and needed my mum to explain it afterwards, as I had never heard of the Magdalene Laundries. I think in a way I satisfied some of the motivation behind Cillian making this FILM as the debut of his studio, as when I got home I read the Wikipedia page for the Magdalene laundries and did some learning. Horrific stuff.",
     "type": "FILM"
   },
   {

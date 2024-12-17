@@ -6,6 +6,7 @@ export default function FilmForm() {
       type: "FILM",
       name: event.target.name.value,
       img: event.target.img.value,
+      rating: event.target.rating.value,
       director: event.target.director.value,
       releaseYear: event.target.year.value,
       review: event.target.review.value,

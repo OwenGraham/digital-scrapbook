@@ -3,9 +3,10 @@ export default function FilmForm() {
     event.preventDefault();
 
     const formData = {
-      type: "FILM",
+      type: "ALBUM",
       name: event.target.name.value,
       img: event.target.img.value,
+      rating: event.target.rating.value,
       artist: event.target.artist.value,
       releaseYear: event.target.year.value,
       review: event.target.review.value,
@@ -41,7 +42,7 @@ export default function FilmForm() {
       <input type="number" id="year" name="year" required />
       <label htmlFor="review">Review:</label>
       <textarea id="review" name="review" rows="4" required></textarea>
-      <button type="submit">Add film</button>
+      <button type="submit">Add album</button>
     </form>
   );
 }

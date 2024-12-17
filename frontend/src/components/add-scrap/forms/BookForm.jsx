@@ -6,6 +6,7 @@ export default function FilmForm() {
       type: "BOOK",
       name: event.target.name.value,
       img: event.target.img.value,
+      rating: event.target.rating.value,
       author: event.target.author.value,
       releaseYear: event.target.year.value,
       review: event.target.review.value,
@@ -41,7 +42,7 @@ export default function FilmForm() {
       <input type="number" id="year" name="year" required />
       <label htmlFor="review">Review:</label>
       <textarea id="review" name="review" rows="4" required></textarea>
-      <button type="submit">Add film</button>
+      <button type="submit">Add book</button>
     </form>
   );
 }
