@@ -5,11 +5,7 @@ import io.github.owengraham.models.Scrap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/scraps")
@@ -28,7 +24,7 @@ public class ScrapController {
     }
 
     @PostMapping
-    public Scrap addScrap(Scrap scrap) {
+    public Scrap addScrap(@RequestBody Scrap scrap) {
         return scrapRepository.addScrap(scrap);
     }
 }

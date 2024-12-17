@@ -1,39 +1,49 @@
 import { useEffect } from "react";
 import Filter from "./Filter";
-// import DropDownFilter from "./DropDownFilter";
 import "../styles/filters.css";
 
-export default function Filters({ selectedFilters, setSelectedFilters, sortMode, setSortMode }) {
+const filterMapping = {
+  All: "ALL",
+  Events: "EVENT",
+  Wishlist: "WISHLIST",
+  Films: "FILM",
+  Books: "BOOK",
+  Albums: "ALBUM",
+  Recipes: "RECIPE",
+  Trips: "TRIP",
+};
+
+export default function Filters({
+  selectedFilters,
+  setSelectedFilters,
+  sortMode,
+  setSortMode,
+}) {
   useEffect(() => {
     const filtersElement = document.getElementById("filters");
     filtersElement.classList.add("fade-in");
   }, []);
 
   const handleFilterClick = (filter) => {
-    if (filter === "All") {
-      if (selectedFilters.includes("All")) {
+    const mappedFilter = filterMapping[filter];
+    if (mappedFilter === "ALL") {
+      if (selectedFilters.includes("ALL")) {
         setSelectedFilters([]);
       } else {
-        setSelectedFilters([
-          "All",
-          "Event",
-          "Wishlist",
-          "Film",
-          "Book",
-          "Album",
-          "Recipe",
-          "Trip",
-        ]);
+        setSelectedFilters(Object.values(filterMapping));
       }
     } else {
       setSelectedFilters((prevFilters) => {
-        const newFilters = prevFilters.includes(filter)
-          ? prevFilters.filter((f) => f !== filter)
-          : [...prevFilters, filter];
-        if (newFilters.length === 7 && !newFilters.includes("All")) {
-          newFilters.push("All");
-        } else if (newFilters.includes("All")) {
-          newFilters.splice(newFilters.indexOf("All"), 1);
+        const newFilters = prevFilters.includes(mappedFilter)
+          ? prevFilters.filter((f) => f !== mappedFilter)
+          : [...prevFilters, mappedFilter];
+        if (
+          newFilters.length === Object.values(filterMapping).length - 1 &&
+          !newFilters.includes("ALL")
+        ) {
+          newFilters.push("ALL");
+        } else if (newFilters.includes("ALL")) {
+          newFilters.splice(newFilters.indexOf("ALL"), 1);
         }
         return newFilters;
       });
@@ -46,56 +56,21 @@ export default function Filters({ selectedFilters, setSelectedFilters, sortMode,
 
   return (
     <menu id="filters">
-      <Filter
-        onClick={() => handleFilterClick("All")}
-        selected={selectedFilters.includes("All")}
+      {Object.keys(filterMapping).map((filter) => (
+        <Filter
+          key={filter}
+          onClick={() => handleFilterClick(filter)}
+          selected={selectedFilters.includes(filterMapping[filter])}
+        >
+          {filter}
+        </Filter>
+      ))}
+      <select
+        name="sortBy"
+        id="sortBy"
+        value={sortMode}
+        onChange={handleSortChange}
       >
-        All
-      </Filter>
-      {/* <DropDownFilter>events</DropDownFilter> */}
-      <Filter
-        onClick={() => handleFilterClick("Event")}
-        selected={selectedFilters.includes("Event")}
-      >
-        Events
-      </Filter>
-      <Filter
-        onClick={() => handleFilterClick("Wishlist")}
-        selected={selectedFilters.includes("Wishlist")}
-      >
-        Wishlist
-      </Filter>
-      <Filter
-        onClick={() => handleFilterClick("Film")}
-        selected={selectedFilters.includes("Film")}
-      >
-        Films
-      </Filter>
-      <Filter
-        onClick={() => handleFilterClick("Book")}
-        selected={selectedFilters.includes("Book")}
-      >
-        Books
-      </Filter>
-      <Filter
-        onClick={() => handleFilterClick("Album")}
-        selected={selectedFilters.includes("Album")}
-      >
-        Albums
-      </Filter>
-      <Filter
-        onClick={() => handleFilterClick("Recipe")}
-        selected={selectedFilters.includes("Recipe")}
-      >
-        Recipes
-      </Filter>
-      <Filter
-        onClick={() => handleFilterClick("Trip")}
-        selected={selectedFilters.includes("Trip")}
-      >
-        Trips
-      </Filter>
-      <select name="sortBy" id="sortBy" value={sortMode} onChange={handleSortChange}>
         <option value="oldToNew">Old to new</option>
         <option value="newToOld">New to old</option>
       </select>
