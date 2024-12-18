@@ -1,23 +1,21 @@
 import { useState } from "react";
 import "../../styles/add-scrap.css";
 
-import EventForm from "./forms/EventForm";
-import WishlistForm from "./forms/WishlistForm";
-import FilmForm from "./forms/FilmForm";
-import BookForm from "./forms/BookForm";
-import AlbumForm from "./forms/AlbumForm";
-import RecipeForm from "./forms/RecipeForm";
-import TripForm from "./forms/TripForm";
+import AddScrapForm from "./AddScrapForm";
 
-export default function AddScrap() {
+export default function AddScrap({ fetchScraps }) {
   const [scrapType, setScrapType] = useState("");
 
   const handleTypeChange = (event) => {
     setScrapType(event.target.value);
   };
 
+  const handleCloseOverlay = () => {
+    setScrapType("");
+  };
+
   return (
-    <>
+    <section id="addScrap">
       <select
         name="selectScrapType"
         id="typeSelect"
@@ -35,13 +33,17 @@ export default function AddScrap() {
         <option value="RECIPE">Recipe</option>
         <option value="TRIP">Trip</option>
       </select>
-      {(scrapType === "EVENT" && <EventForm />) ||
-        (scrapType === "WISHLIST" && <WishlistForm />) ||
-        (scrapType === "FILM" && <FilmForm />) ||
-        (scrapType === "BOOK" && <BookForm />) ||
-        (scrapType === "ALBUM" && <AlbumForm />) ||
-        (scrapType === "RECIPE" && <RecipeForm />) ||
-        (scrapType === "TRIP" && <TripForm />)}
-    </>
+      {scrapType && (
+        <div className="overlay" onClick={handleCloseOverlay}>
+          {scrapType && (
+            <AddScrapForm
+              scrapType={scrapType}
+              handleCloseOverlay={handleCloseOverlay}
+              fetchScraps={fetchScraps}
+            />
+          )}
+        </div>
+      )}
+    </section>
   );
 }

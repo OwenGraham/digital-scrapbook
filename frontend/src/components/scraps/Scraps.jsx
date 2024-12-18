@@ -1,22 +1,23 @@
 import { useState, useEffect } from "react";
-import Film from "./scraps/Film";
-import Book from "./scraps/Book";
-import Album from "./scraps/Album";
-import Recipe from "./scraps/Recipe";
-import Wishlist from "./scraps/Wishlist";
-import EventComponent from "./scraps/EventComponent";
-import Trip from "./scraps/Trip";
-import "../styles/scraps.css";
+import Film from "./Film";
+import Book from "./Book";
+import Album from "./Album";
+import Recipe from "./Recipe";
+import Wishlist from "./Wishlist";
+import EventComponent from "./EventComponent";
+import Trip from "./Trip";
+import "../../styles/scraps.css";
 
-export default function Scraps({ selectedFilters, sortMode }) {
-  const [scraps, setScraps] = useState([]);
+export default function Scraps({
+  selectedFilters,
+  sortMode,
+  fetchScraps,
+  scraps,
+}) {
   const [selectedScrap, setSelectedScrap] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/scraps")
-      .then((response) => response.json())
-      .then((data) => setScraps(data))
-      .catch((error) => console.error("Error fetching scraps:", error));
+    fetchScraps();
   }, []);
 
   const handleImageClick = (scrap) => {

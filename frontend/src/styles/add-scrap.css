@@ -1,7 +1,13 @@
-#typeSelect {
+#addScrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-family: "Chillax-Variable";
+}
+
+#typeSelect {
   margin-bottom: 10px;
   padding-left: 5px;
   padding-right: 5px;
@@ -10,7 +16,7 @@
   display: flex;
   align-items: center;
   font-size: 16px;
-  font-family: "Chillax-Variable";
+  font-family: inherit;
   user-select: none;
 }
 
@@ -20,10 +26,16 @@
   align-items: flex-start; /* Align items to the left */
   justify-content: center;
   margin-top: 30px;
-  font-family: "Chillax-Variable";
   padding: 10px;
   border: 1px solid #ac8670;
   border-radius: 10px;
+  background-color: #f0e5cf;
+  z-index: 1000;
+}
+
+.add-scrap-form h2 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 label {
@@ -39,6 +51,7 @@ textarea {
   border: 1px solid #ac8670;
   border-radius: 10px;
   padding-left: 8px;
+  font-family: inherit;
 }
 
 button {

@@ -1,12 +1,20 @@
 import { useState } from "react";
 import "./styles/app.css";
-import Filters from "./components/Filters.jsx";
-import Scraps from "./components/Scraps.jsx";
-import NewScrap from "./components/add-scrap/AddScrap.jsx";
+import Filters from "./components/filters/Filters";
+import Scraps from "./components/scraps/Scraps";
+import AddScrap from "./components/add-scrap/AddScrap";
 
 function App() {
+  const [scraps, setScraps] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [sortMode, setSortMode] = useState("newToOld");
+
+  const fetchScraps = () => {
+    fetch("http://localhost:8080/api/scraps")
+      .then((response) => response.json())
+      .then((data) => setScraps(data))
+      .catch((error) => console.error("Error fetching scraps:", error));
+  };
 
   return (
     <div id="app">
@@ -17,8 +25,13 @@ function App() {
         sortMode={sortMode}
         setSortMode={setSortMode}
       />
-      <Scraps selectedFilters={selectedFilters} sortMode={sortMode} />
-      <NewScrap />
+      <Scraps
+        selectedFilters={selectedFilters}
+        sortMode={sortMode}
+        fetchScraps={fetchScraps}
+        scraps={scraps}
+      />
+      <AddScrap fetchScraps={fetchScraps} />
     </div>
   );
 }

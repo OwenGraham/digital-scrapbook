@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Filter from "./Filter";
-import "../styles/filters.css";
+import "../../styles/filters.css";
 
 const filterMapping = {
   All: "ALL",
