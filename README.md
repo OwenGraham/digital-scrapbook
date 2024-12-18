@@ -6,10 +6,10 @@ I wanted a creative outlet and to learn a new skill, so I followed a Udemy cours
 
 The live app can be found [here](https://owengraham.github.io/digital-scrapbook/)
 
-### Main View 
+### Main View
 
-![The main view of the app](src/assets/readme/home.png)
+![The main view of the app](frontend/src/assets/readme/home.png)
 
 ### Extra Detail View
 
-![Extra detail view for film](src/assets/readme/film-extra-detail.png)
+![Extra detail view for film](frontend/src/assets/readme/film-extra-detail.png)

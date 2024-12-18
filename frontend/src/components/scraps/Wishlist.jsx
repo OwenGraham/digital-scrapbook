@@ -1,5 +1,4 @@
 export default function Wishlist({ name, brand, price, link, img }) {
-  console.log("Image URL:", img);
   return (
     <section className="scrap">
       <img src={img} alt="wishlist item" />

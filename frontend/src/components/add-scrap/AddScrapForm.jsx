@@ -1,15 +1,32 @@
+import { useState } from "react";
+
 export default function EventForm({
   scrapType,
   handleCloseOverlay,
   fetchScraps,
 }) {
-  const handleSubmit = (event) => {
+  const [imageFile, setImageFile] = useState(null);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    let imageUrl = event.target.img.value;
+
+    if (imageFile) {
+      const formData = new FormData();
+      formData.append("image", imageFile);
+      const response = await fetch("http://localhost:8080/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.text();
+      imageUrl = "http://localhost:8080" + data;
+    }
 
     const formData = {
       type: scrapType,
       name: event.target.name.value,
-      img: event.target.img.value,
+      img: imageUrl,
     };
 
     if (scrapType === "EVENT") {
@@ -43,8 +60,8 @@ export default function EventForm({
       formData.ingredients = event.target.ingredients.value
         .split(",")
         .map((ingredient) => ingredient.trim());
-      formData.recipe = event.target.recipe.value
-        .split("\n")
+      formData.steps = event.target.steps.value
+        .split(",")
         .map((step) => step.trim());
     } else if (scrapType === "TRIP") {
       formData.location = event.target.location.value;
@@ -80,7 +97,15 @@ export default function EventForm({
       <label htmlFor="name">Name:</label>
       <input type="text" id="name" name="name" required />
       <label htmlFor="img">Image URL:</label>
-      <input type="text" id="img" name="img" required />
+      <input type="text" id="img" name="img" />
+      <label htmlFor="imageFile">Or upload an image:</label>
+      <input
+        type="file"
+        id="imageFile"
+        name="imageFile"
+        accept="image/*"
+        onChange={(e) => setImageFile(e.target.files[0])}
+      />
       {scrapType === "EVENT" && (
         <>
           <label htmlFor="date">Date:</label>
@@ -129,6 +154,8 @@ export default function EventForm({
       )}
       {scrapType === "RECIPE" && (
         <>
+          <label htmlFor="cookingTime">Cooking time:</label>
+          <input type="number" id="cookingTime" name="cookingTime" required />
           <label htmlFor="ingredients">Ingredients:</label>
           <textarea
             id="ingredients"

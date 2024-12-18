@@ -1,4 +1,4 @@
-export default function Recipe({ img, name, cookingTime, ingredients, recipe }) {
+export default function Recipe({ img, name, cookingTime, ingredients, steps }) {
   return (
     <section className="scrap">
       <img src={img} alt="Finished recipe" />
@@ -13,7 +13,7 @@ export default function Recipe({ img, name, cookingTime, ingredients, recipe }) 
         </ul>
         <h3>Recipe</h3>
         <ul>
-          {recipe.map((step, index) => (
+          {steps.map((step, index) => (
             <li key={index}>{step}</li>
           ))}
         </ul>

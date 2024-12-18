@@ -1,4 +1,4 @@
-package io.github.owengraham;
+package io.github.owengraham.api;
 
 import io.github.owengraham.models.Scrap;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/scraps")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://192.168.1.151:3000"})
 public class ScrapController {
     private final ScrapRepository scrapRepository;
 

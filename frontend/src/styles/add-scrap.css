@@ -18,6 +18,7 @@
   font-size: 16px;
   font-family: inherit;
   user-select: none;
+  cursor: pointer;
 }
 
 .add-scrap-form {
@@ -55,11 +56,14 @@ textarea {
 }
 
 button {
-  background-color: white;
+  background-color: #ac8670;
   border: 1px solid #ac8670;
   border-radius: 10px;
   font-family: "Chillax-Variable";
   font-size: 16px;
+
+  cursor: pointer;
+
   margin-left: auto;
   margin-right: auto;
 }

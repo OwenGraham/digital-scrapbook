@@ -1,4 +1,4 @@
-package io.github.owengraham;
+package io.github.owengraham.api;
 
 import org.springframework.stereotype.Repository;
 import java.util.List;

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "../../styles/add-scrap.css";
 
 import AddScrapForm from "./AddScrapForm";
 
 export default function AddScrap({ fetchScraps }) {
   const [scrapType, setScrapType] = useState("");
+  const selectRef = useRef(null);
 
   const handleTypeChange = (event) => {
     setScrapType(event.target.value);
@@ -12,6 +13,9 @@ export default function AddScrap({ fetchScraps }) {
 
   const handleCloseOverlay = () => {
     setScrapType("");
+    if (selectRef.current) {
+      selectRef.current.value = ""; // Reset the select element to its default value
+    }
   };
 
   return (
@@ -21,6 +25,7 @@ export default function AddScrap({ fetchScraps }) {
         id="typeSelect"
         defaultValue=""
         onChange={handleTypeChange}
+        ref={selectRef} // Attach the ref to the select element
       >
         <option value="" disabled>
           Add new scrap

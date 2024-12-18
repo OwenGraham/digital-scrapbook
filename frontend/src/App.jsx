@@ -9,8 +9,10 @@ function App() {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [sortMode, setSortMode] = useState("newToOld");
 
+  const API_BASE_URL = "http://localhost:8080";
+
   const fetchScraps = () => {
-    fetch("http://localhost:8080/api/scraps")
+    fetch(`${API_BASE_URL}/api/scraps`)
       .then((response) => response.json())
       .then((data) => setScraps(data))
       .catch((error) => console.error("Error fetching scraps:", error));
