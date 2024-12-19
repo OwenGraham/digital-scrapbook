@@ -20,7 +20,8 @@ public class ScrapController {
 
     @GetMapping
     public List<Scrap> getScraps() {
-        return scrapRepository.getScraps();
+        List<Scrap> scraps = scrapRepository.getScraps();
+        return scraps;
     }
 
     @PostMapping
