@@ -6,12 +6,18 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import io.github.owengraham.exceptions.WriteScrapException;
 import io.github.owengraham.models.Scrap;
 
 public class JsonWriter {
-    public static void writeScraps(String filePath, List<Scrap> scraps) throws IOException {
+    public static void writeScraps(String filePath, List<Scrap> scraps) throws WriteScrapException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new JavaTimeModule());
-        mapper.writeValue(new File(filePath), scraps);
+
+        try {
+            mapper.writeValue(new File(filePath), scraps);
+        } catch (IOException e) {
+            throw new WriteScrapException("Failed to add scrap",e);
+        }
     }
 }

@@ -1,5 +1,7 @@
 package io.github.owengraham.api;
 
+import io.github.owengraham.exceptions.LoadScrapsException;
+import io.github.owengraham.exceptions.WriteScrapException;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.ArrayList;
@@ -12,33 +14,14 @@ import io.github.owengraham.utils.JsonWriter;
 public class ScrapRepository {
     private final String FILE_PATH = "data/scraps.json";
 
-    public List<Scrap> getScraps() {
-        try {
-            return JsonLoader.loadScraps(FILE_PATH);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return new ArrayList<>();
-        }
+    public List<Scrap> getScraps() throws LoadScrapsException {
+        return JsonLoader.loadScraps(FILE_PATH);
     }
 
-    public Scrap getScrapByName(String name) {
-        List<Scrap> scraps = getScraps();
-        for (Scrap scrap : scraps) {
-            if (scrap.getName().equals(name)) {
-                return scrap;
-            }
-        }
-        return null;
-    }
-
-    public Scrap addScrap(Scrap scrap) {
+    public Scrap addScrap(Scrap scrap) throws WriteScrapException, LoadScrapsException {
         List<Scrap> scraps = getScraps();
         scraps.add(scrap);
-        try {
-            JsonWriter.writeScraps(FILE_PATH, scraps);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        JsonWriter.writeScraps(FILE_PATH, scraps);
         return scrap;
     }
 }

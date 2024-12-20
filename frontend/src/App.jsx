@@ -14,7 +14,7 @@ function App() {
   const fetchScraps = () => {
     fetch(`${API_BASE_URL}/api/scraps`)
       .then((response) => response.json())
-      .then((data) => setScraps(data))
+      .then((data) => setScraps(data.scraps))
       .catch((error) => console.error("Error fetching scraps:", error));
   };
 
