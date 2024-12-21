@@ -12,7 +12,7 @@ import io.github.owengraham.exceptions.LoadScrapsException;
 import io.github.owengraham.models.Scrap;
 
 public class JsonLoader {
-    public static List<Scrap> loadScraps(String filePath) {
+    public List<Scrap> loadScraps(String filePath) {
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new JavaTimeModule());
         try {

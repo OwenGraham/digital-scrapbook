@@ -1,6 +1,7 @@
 package io.github.owengraham.api;
 
 import io.github.owengraham.exceptions.LoadScrapsException;
+import io.github.owengraham.exceptions.ScrapValidationException;
 import io.github.owengraham.exceptions.WriteScrapException;
 import io.github.owengraham.models.Scrap;
 
@@ -31,7 +32,7 @@ public class ScrapController {
     }
 
     @PostMapping
-    public ResponseEntity<SingleScrapResponse> addScrap(@RequestBody Scrap scrap) throws WriteScrapException, LoadScrapsException {
+    public ResponseEntity<SingleScrapResponse> addScrap(@RequestBody Scrap scrap) throws WriteScrapException, LoadScrapsException, ScrapValidationException {
         Scrap responseScrap = scrapRepository.addScrap(scrap);
         SingleScrapResponse response = new SingleScrapResponse(responseScrap, "Successfully added scrap.");
         return new ResponseEntity<>(response, HttpStatus.CREATED);

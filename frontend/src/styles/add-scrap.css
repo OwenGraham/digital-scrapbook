@@ -32,6 +32,7 @@
   border-radius: 10px;
   background-color: #f0e5cf;
   z-index: 1000;
+  max-width: 330px;
 }
 
 .add-scrap-form h2 {
@@ -53,6 +54,10 @@ textarea {
   border-radius: 10px;
   padding-left: 8px;
   font-family: inherit;
+}
+
+.error-message {
+  color: red;
 }
 
 button {

@@ -3,7 +3,9 @@ package io.github.owengraham;
 import io.github.owengraham.api.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.owengraham.exceptions.LoadScrapsException;
+import io.github.owengraham.exceptions.ScrapValidationException;
 import io.github.owengraham.exceptions.WriteScrapException;
+import io.github.owengraham.models.ScrapType;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.ArgumentCaptor;
@@ -219,7 +221,7 @@ public class ScrapControllerTest {
     @DisplayName("Verify that the POST /api/scraps endpoint returns a 400 status code when the request body is invalid.")
     void testAddScrapInvalidData(String expectedMessage, Scrap invalidScrap) throws IOException {
         //Arrange
-        when(scrapRepository.addScrap(invalidScrap)).thenReturn(invalidScrap);
+        when(scrapRepository.addScrap(any(Scrap.class))).thenThrow(new ScrapValidationException(invalidScrap.getType(), "test field", "test method"));
 
         //Act
         String responseBody = given()
@@ -233,6 +235,11 @@ public class ScrapControllerTest {
                 .extract().asString();
 
         //Assert
-        assertThat(responseBody, equalTo(expectedMessage));
+        ObjectMapper objectMapper = new ObjectMapper();
+        ValidationErrorResponse response = objectMapper.readValue(responseBody, ValidationErrorResponse.class);
+
+        assertThat(response.getScrapType(), equalTo(invalidScrap.getType()));
+        assertThat(response.getField(), equalTo("test field"));
+        assertThat(response.getValidationError(), equalTo("test method"));
     }
 }

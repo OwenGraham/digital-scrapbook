@@ -10,7 +10,7 @@ import io.github.owengraham.exceptions.WriteScrapException;
 import io.github.owengraham.models.Scrap;
 
 public class JsonWriter {
-    public static void writeScraps(String filePath, List<Scrap> scraps) throws WriteScrapException {
+    public void writeScraps(String filePath, List<Scrap> scraps) throws WriteScrapException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new JavaTimeModule());
 

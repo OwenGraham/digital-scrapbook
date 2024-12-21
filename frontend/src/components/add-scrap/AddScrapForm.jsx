@@ -6,6 +6,7 @@ export default function EventForm({
   fetchScraps,
 }) {
   const [imageFile, setImageFile] = useState(null);
+  const [errorMessages, setErrorMessages] = useState({});
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -76,7 +77,25 @@ export default function EventForm({
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          return response.json().then((errorData) => {
+            if (response.status === 400) {
+              const fieldErrors = {};
+              if (errorData.field && errorData.message) {
+                fieldErrors[errorData.field] = errorData.message;
+              }
+              setErrorMessages(fieldErrors);
+              throw new Error(
+                errorData.message ||
+                  "Bad Request: Please check your input data."
+              );
+            } else {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+          });
+        }
+      })
       .then((data) => {
         console.log("Success:", data);
         fetchScraps();
@@ -96,6 +115,9 @@ export default function EventForm({
       <h2>Add {scrapType.toLowerCase()}</h2>
       <label htmlFor="name">Name:</label>
       <input type="text" id="name" name="name" required />
+      {errorMessages.name && (
+        <p className="error-message">{errorMessages.name}</p>
+      )}
       <label htmlFor="img">Image URL:</label>
       <input type="text" id="img" name="img" />
       <label htmlFor="imageFile">Or upload an image:</label>
@@ -106,24 +128,45 @@ export default function EventForm({
         accept="image/*"
         onChange={(e) => setImageFile(e.target.files[0])}
       />
+      {errorMessages.img && (
+        <p className="error-message">{errorMessages.img}</p>
+      )}
       {scrapType === "EVENT" && (
         <>
           <label htmlFor="date">Date:</label>
           <input type="date" id="date" name="date" required />
+          {errorMessages.date && (
+            <p className="error-message">{errorMessages.date}</p>
+          )}
           <label htmlFor="venue">Venue:</label>
           <input type="text" id="venue" name="venue" required />
+          {errorMessages.venue && (
+            <p className="error-message">{errorMessages.venue}</p>
+          )}
           <label htmlFor="lineup">Lineup:</label>
           <textarea id="lineup" name="lineup" rows="4" required></textarea>
+          {errorMessages.lineup && (
+            <p className="error-message">{errorMessages.lineup}</p>
+          )}
         </>
       )}
       {scrapType === "WISHLIST" && (
         <>
           <label htmlFor="brand">Brand:</label>
           <input type="text" id="brand" name="brand" required />
+          {errorMessages.brand && (
+            <p className="error-message">{errorMessages.brand}</p>
+          )}
           <label htmlFor="price">Price:</label>
           <input type="number" id="price" name="price" required />
+          {errorMessages.price && (
+            <p className="error-message">{errorMessages.price}</p>
+          )}
           <label htmlFor="link">Link:</label>
           <input type="text" id="link" name="link" required />
+          {errorMessages.link && (
+            <p className="error-message">{errorMessages.link}</p>
+          )}
         </>
       )}
       {(scrapType === "FILM" ||
@@ -132,30 +175,45 @@ export default function EventForm({
         <>
           <label htmlFor="rating">Rating:</label>
           <input type="number" id="rating" name="rating" required />
+          {errorMessages.rating && (
+            <p className="error-message">{errorMessages.rating}</p>
+          )}
         </>
       )}
       {scrapType === "FILM" && (
         <>
           <label htmlFor="director">Director:</label>
           <input type="text" id="director" name="director" required />
+          {errorMessages.director && (
+            <p className="error-message">{errorMessages.director}</p>
+          )}
         </>
       )}
       {scrapType === "BOOK" && (
         <>
           <label htmlFor="author">Author:</label>
           <input type="text" id="author" name="author" required />
+          {errorMessages.author && (
+            <p className="error-message">{errorMessages.author}</p>
+          )}
         </>
       )}
       {scrapType === "ALBUM" && (
         <>
           <label htmlFor="artist">Artist:</label>
           <input type="text" id="artist" name="artist" required />
+          {errorMessages.artist && (
+            <p className="error-message">{errorMessages.artist}</p>
+          )}
         </>
       )}
       {scrapType === "RECIPE" && (
         <>
           <label htmlFor="cookingTime">Cooking time:</label>
           <input type="number" id="cookingTime" name="cookingTime" required />
+          {errorMessages.cookingTime && (
+            <p className="error-message">{errorMessages.cookingTime}</p>
+          )}
           <label htmlFor="ingredients">Ingredients:</label>
           <textarea
             id="ingredients"
@@ -163,18 +221,33 @@ export default function EventForm({
             rows="4"
             required
           ></textarea>
+          {errorMessages.ingredients && (
+            <p className="error-message">{errorMessages.ingredients}</p>
+          )}
           <label htmlFor="steps">Steps:</label>
           <textarea id="steps" name="steps" rows="4" required></textarea>
+          {errorMessages.steps && (
+            <p className="error-message">{errorMessages.steps}</p>
+          )}
         </>
       )}
       {scrapType === "TRIP" && (
         <>
           <label htmlFor="location">Location:</label>
           <input type="text" id="location" name="location" required />
+          {errorMessages.location && (
+            <p className="error-message">{errorMessages.location}</p>
+          )}
           <label htmlFor="from">Start date:</label>
           <input type="date" id="from" name="from" required />
+          {errorMessages.from && (
+            <p className="error-message">{errorMessages.from}</p>
+          )}
           <label htmlFor="to">End date:</label>
           <input type="date" id="to" name="to" required />
+          {errorMessages.to && (
+            <p className="error-message">{errorMessages.to}</p>
+          )}
         </>
       )}
       {(scrapType === "FILM" ||
@@ -183,8 +256,14 @@ export default function EventForm({
         <>
           <label htmlFor="releaseYear">Release year:</label>
           <input type="number" id="releaseYear" name="releaseYear" required />
+          {errorMessages.releaseYear && (
+            <p className="error-message">{errorMessages.releaseYear}</p>
+          )}
           <label htmlFor="review">Review:</label>
           <textarea id="review" name="review" rows="4" required></textarea>
+          {errorMessages.review && (
+            <p className="error-message">{errorMessages.review}</p>
+          )}
         </>
       )}
       <button type="submit">Add {scrapType.toLowerCase()}</button>
