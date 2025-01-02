@@ -31,3 +31,7 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /tests-examples/
+
+# data
+/data/
+/backend/data/
