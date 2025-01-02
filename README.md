@@ -108,15 +108,13 @@ mvn spring-boot:run
 
 ### For the Frontend
 
-6. Navigate to the frontend directory:
+6. Open the project in a new terminal and navigate to the frontend directory:
 
 ```bash
-cd ../frontend/
+cd frontend
 ```
 
-_This step assumes you are still in the backend directory_
-
-7. Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
