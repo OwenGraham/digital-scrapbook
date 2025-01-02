@@ -25,4 +25,13 @@ public class ScrapDataProvider {
                 Arguments.of("Validation failed for BOOK: field 'rating' failed validation 'isInRange'", new Book("book-name", "img", "author", 0, 6, "review"))//rating is out of bounds
         );
     }
+
+    static Stream<Arguments> provideValidScrapObjects() {
+        return Stream.of(
+                Arguments.of(new Event("event-name", "event-img", LocalDate.of(2024, 1, 1), "venue", List.of("lineup"))),
+                Arguments.of(new Wishlist("wishlist-name", "wishlist-img", "brand",new BigDecimal(1), "https://example.com")),
+                Arguments.of(new Film("film-name", "film-img", "director",2024, 0, "review")),
+                Arguments.of(new Book("book-name", "img", "author", 0, 0, "review"))
+        );
+    }
 }

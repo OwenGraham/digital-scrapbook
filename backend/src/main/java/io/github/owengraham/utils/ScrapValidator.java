@@ -8,9 +8,9 @@ import java.util.regex.Pattern;
 
 public class ScrapValidator {
 
-    private static final Pattern URL_PATTERN = Pattern.compile("^(http|https)://.*$");
+    private final Pattern URL_PATTERN = Pattern.compile("^(http|https)://.*$");
 
-    public static void validate(Scrap scrap) {
+    public void validate(Scrap scrap) {
         if (scrap.getName() == null || scrap.getName().isEmpty()) {
             throw new ScrapValidationException(scrap.getType(),"name","isNotEmpty");
         }
@@ -43,7 +43,7 @@ public class ScrapValidator {
         }
     }
 
-    private static void validateEvent(Event event) {
+    private void validateEvent(Event event) {
         if (event.getDate() == null) {
             throw new ScrapValidationException(ScrapType.EVENT,"date","isNotNull");
         }
@@ -55,7 +55,7 @@ public class ScrapValidator {
         }
     }
 
-    private static void validateWishlist(Wishlist wishlist) {
+    private void validateWishlist(Wishlist wishlist) {
         if (wishlist.getBrand() == null || wishlist.getBrand().isEmpty()) {
             throw new ScrapValidationException(ScrapType.WISHLIST,"brand","isNotEmpty");
         }
@@ -73,7 +73,7 @@ public class ScrapValidator {
         }
     }
 
-    private static void validateFilm(Film film) {
+    private void validateFilm(Film film) {
         if (film.getDirector() == null || film.getDirector().isEmpty()) {
             throw new ScrapValidationException(ScrapType.FILM,"director","isNotEmpty");
         }
@@ -88,7 +88,7 @@ public class ScrapValidator {
         }
     }
 
-    private static void validateBook(Book book) {
+    private void validateBook(Book book) {
         if (book.getAuthor() == null || book.getAuthor().isEmpty()) {
             throw new ScrapValidationException(ScrapType.BOOK,"author","isNotEmpty");
         }
@@ -100,7 +100,7 @@ public class ScrapValidator {
         }
     }
 
-    private static void validateAlbum(Album album) {
+    private void validateAlbum(Album album) {
         if (album.getArtist() == null || album.getArtist().isEmpty()) {
             throw new ScrapValidationException(ScrapType.ALBUM,"artist","isNotEmpty");
         }
@@ -115,7 +115,7 @@ public class ScrapValidator {
         }
     }
 
-    private static void validateRecipe(Recipe recipe) {
+    private void validateRecipe(Recipe recipe) {
         if (recipe.getCookingTime() < 0) {
             throw new ScrapValidationException(ScrapType.RECIPE,"cookingTime","isPositive");
         }
@@ -127,7 +127,7 @@ public class ScrapValidator {
         }
     }
 
-    private static void validateTrip(Trip trip) {
+    private void validateTrip(Trip trip) {
         if(trip.getLocation() == null || trip.getLocation().isEmpty()) {
             throw new ScrapValidationException(ScrapType.TRIP,"location","isNotEmpty");
         }

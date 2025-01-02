@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.owengraham.exceptions.LoadScrapsException;
 import io.github.owengraham.exceptions.ScrapValidationException;
 import io.github.owengraham.exceptions.WriteScrapException;
-import io.github.owengraham.models.ScrapType;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.ArgumentCaptor;
@@ -40,7 +39,6 @@ import static io.restassured.module.mockmvc.RestAssuredMockMvc.when;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
-
 
 @SpringBootTest(classes = Main.class)
 public class ScrapControllerTest {
@@ -103,8 +101,7 @@ public class ScrapControllerTest {
                     hasProperty("director", equalTo(film.getDirector())),
                     hasProperty("releaseYear", equalTo(film.getReleaseYear())),
                     hasProperty("rating", equalTo(film.getRating())),
-                    hasProperty("review", equalTo(film.getReview())))
-            );
+                    hasProperty("review", equalTo(film.getReview()))));
         } catch (Exception e) {
             fail("Exception occurred while deserializing response: " + e.getMessage());
         }
@@ -138,15 +135,14 @@ public class ScrapControllerTest {
         ArgumentCaptor<Scrap> scrapCaptor = ArgumentCaptor.forClass(Scrap.class);
 
         // Act using RestAssuredMockMvc
-        String responseBody = given()
+        given()
                 .contentType("application/json")
                 .accept("application/json")
                 .body(scrap)
                 .when()
                 .post("/api/scraps")
                 .then()
-                .statusCode(201)
-                .extract().asString();
+                .statusCode(201);
 
         // Assert
 
@@ -184,24 +180,26 @@ public class ScrapControllerTest {
     @Test
     @DisplayName("Verify that the GET /api/scraps endpoint handles exceptions gracefully")
     void testGetScrapsException() throws Exception {
-        //Arrange
-        when(scrapRepository.getScraps()).thenThrow(new LoadScrapsException("Failed to load scraps", new IOException()));
+        // Arrange
+        when(scrapRepository.getScraps())
+                .thenThrow(new LoadScrapsException("Failed to load scraps", new IOException()));
 
-        //Act using RestAssuredMockMvc
+        // Act using RestAssuredMockMvc
         String responseBody = when().get("/api/scraps").then().statusCode(500).extract().asString();
 
-        //Assert
+        // Assert
         assertThat(responseBody, equalTo("Failed to load scraps"));
     }
 
     @Test
     @DisplayName("Verify that the POST /api/scraps endpoint handles exceptions gracefully")
     void testAddScrapException() throws Exception {
-        //Arrange
+        // Arrange
         Wishlist scrap = new Wishlist("wishlist-name", "wishlist-img", "brand", new BigDecimal("10.00"), "link");
-        when(scrapRepository.addScrap(any(Scrap.class))).thenThrow(new WriteScrapException("Failed to add scrap", new IOException()));
+        when(scrapRepository.addScrap(any(Scrap.class)))
+                .thenThrow(new WriteScrapException("Failed to add scrap", new IOException()));
 
-        //Act using RestAssuredMockMvc
+        // Act using RestAssuredMockMvc
         String responseBody = given()
                 .contentType("application/json")
                 .accept("application/json")
@@ -212,7 +210,7 @@ public class ScrapControllerTest {
                 .statusCode(500)
                 .extract().asString();
 
-        //Assert
+        // Assert
         assertThat(responseBody, equalTo("Failed to add scrap"));
     }
 
@@ -220,10 +218,11 @@ public class ScrapControllerTest {
     @MethodSource("io.github.owengraham.utils.ScrapDataProvider#provideInvalidScrapObjects")
     @DisplayName("Verify that the POST /api/scraps endpoint returns a 400 status code when the request body is invalid.")
     void testAddScrapInvalidData(String expectedMessage, Scrap invalidScrap) throws IOException {
-        //Arrange
-        when(scrapRepository.addScrap(any(Scrap.class))).thenThrow(new ScrapValidationException(invalidScrap.getType(), "test field", "test method"));
+        // Arrange
+        when(scrapRepository.addScrap(any(Scrap.class)))
+                .thenThrow(new ScrapValidationException(invalidScrap.getType(), "test field", "test method"));
 
-        //Act
+        // Act
         String responseBody = given()
                 .contentType("application/json")
                 .accept("application/json")
@@ -234,7 +233,7 @@ public class ScrapControllerTest {
                 .statusCode(400)
                 .extract().asString();
 
-        //Assert
+        // Assert
         ObjectMapper objectMapper = new ObjectMapper();
         ValidationErrorResponse response = objectMapper.readValue(responseBody, ValidationErrorResponse.class);
 
