@@ -5,7 +5,7 @@ $env:PATH += ";C:\Program Files\nodejs"
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 # Start the backend server
-Start-Process -NoNewWindow -FilePath "powershell" -ArgumentList "cd `"$scriptDir\backend`"; mvn spring-boot:run"
+Start-Process -NoNewWindow -WorkingDirectory "$scriptDir\backend" -FilePath "powershell" -ArgumentList "mvn spring-boot:run"
 
 # Start the frontend server
-Start-Process -NoNewWindow -FilePath "powershell" -ArgumentList "cd `"$scriptDir\frontend`"; npm start"
+Start-Process -NoNewWindow -WorkingDirectory "$scriptDir\frontend" -FilePath "powershell" -ArgumentList "npm start"
