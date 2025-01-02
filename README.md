@@ -17,14 +17,16 @@ A demo version of the app with read-only functionality is hosted on GitHub pages
   - [Extra Detail View](#extra-detail-view)
   - [Add Scrap Form](#add-scrap-form)
 - [Prerequisites](#prerequisites)
-- [Installation](#installation)
-  - [For the Backend](#for-the-backend)
-  - [For the Frontend](#for-the-frontend)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-  - [Endpoints](#endpoints)
-  - [Example Request](#example-request)
-- [Contact Information](#contact-information)
+- [Installation and Usage](#installation-and-usage)
+  - [Primary Method](#primary-method)
+  - [Alternate Method](#alternate-method)
+    - [For the Backend](#for-the-backend)
+    - [For the Frontend](#for-the-frontend)
+  - [To Use the App](#to-use-the-app)
+  - [API Documentation](#api-documentation)
+    - [Endpoints](#endpoints)
+    - [Example Request](#example-request)
+  - [Contact Information](#contact-information)
 
 ## Summary
 
@@ -70,7 +72,7 @@ Digital Scrapbook is a web application that allows users to create and manage di
 - [Node.js 22.11.0](https://nodejs.org/en/download/current)
 - [Maven 3.9.9](https://maven.apache.org/download.cgi)
 
-## Installation
+## Installation and Usage
 
 To run the app locally, follow these steps:
 
@@ -86,7 +88,21 @@ git clone https://github.com/OwenGraham/digital-scrapbook.git
 cd digital-scrapbook
 ```
 
-### For the Backend
+### Primary Method
+
+3. To start the application, run the following command in the console:
+
+```powershell
+powershell.exe -File "C:\path\to\digital-scrapbook\start-app.ps1"
+```
+
+This script will start both the backend and frontend servers.
+
+> Make sure to replace "path\to" with the path to the directory you cloned the repo in
+
+### Alternate Method
+
+#### For the Backend
 
 3. Navigate to the backend directory:
 
@@ -106,7 +122,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-### For the Frontend
+#### For the Frontend
 
 6. Open the project in a new terminal and navigate to the frontend directory:
 
@@ -126,20 +142,20 @@ npm install
 npm start
 ```
 
-## Usage
+### To Use the App
 
 1. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 2. Use the app to add, view, and manage your digital scraps.
 
-## API Documentation
+### API Documentation
 
-### Endpoints
+#### Endpoints
 
 - `GET /api/scraps`: Fetch all scraps.
 - `POST /api/scraps`: Add a new scrap.
 - `POST /api/upload`: Upload an image.
 
-### Example Request
+#### Example Request
 
 ```bash
 curl -X POST http://localhost:8080/api/scraps \
@@ -155,6 +171,6 @@ curl -X POST http://localhost:8080/api/scraps \
 }'
 ```
 
-## Contact Information
+### Contact Information
 
 For any questions or suggestions, feel free to contact me at owen.graham@outlook.com.
