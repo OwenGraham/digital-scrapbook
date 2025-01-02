@@ -56,6 +56,21 @@ textarea {
   font-family: inherit;
 }
 
+#imageFile {
+  border: none;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #ac8670;
+  border: 1px solid #ac8670;
+  border-radius: 10px;
+  color: white;
+  font-family: "Chillax-Variable";
+  font-size: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 .error-message {
   color: red;
 }
