@@ -2,6 +2,7 @@ package io.github.owengraham.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -15,8 +16,13 @@ public class JsonLoader {
     public List<Scrap> loadScraps(String filePath) {
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new JavaTimeModule());
+        File file = new File(filePath);
+        if (!file.exists()) {
+            return new ArrayList<>(); // Return an empty list if the file doesn't exist
+        }
         try {
-            return mapper.readValue(new File(filePath), new TypeReference<List<Scrap>>() {});
+            return mapper.readValue(file, new TypeReference<List<Scrap>>() {
+            });
         } catch (IOException e) {
             throw new LoadScrapsException("Failed to load scraps", e);
         }
