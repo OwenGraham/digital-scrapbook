@@ -16,17 +16,20 @@ A demo version of the app with read-only functionality is hosted on GitHub pages
   - [Main View](#main-view)
   - [Extra Detail View](#extra-detail-view)
   - [Add Scrap Form](#add-scrap-form)
-- [Prerequisites](#prerequisites)
-- [Installation and Usage](#installation-and-usage)
-  - [For the Backend](#for-the-backend)
-  - [For the Frontend](#for-the-frontend)
-  - [Primary Method](#primary-method)
-  - [Alternate Method](#alternate-method)
+- [User Guide](#user-guide)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Install Dependencies](#install-dependencies)
+    - [For the Backend](#for-the-backend)
+    - [For the Frontend](#for-the-frontend)
+  - [Running the App](#running-the-app)
+    - [Primary Method](#primary-method)
+    - [Alternate Method](#alternate-method)
   - [To Use the App](#to-use-the-app)
   - [API Documentation](#api-documentation)
     - [Endpoints](#endpoints)
     - [Example Request](#example-request)
-  - [Contact Information](#contact-information)
+- [Contact Information](#contact-information)
 
 ## Summary
 
@@ -66,13 +69,15 @@ Digital Scrapbook is a web application that allows users to create and manage di
 
 ![Form for adding new film scrap](frontend/src/assets/readme/add-film-form.png)
 
-## Prerequisites
+## User Guide
+
+### Prerequisites
 
 - [JDK 23](https://www.oracle.com/uk/java/technologies/downloads/)
 - [Node.js 22.11.0](https://nodejs.org/en/download/current)
 - [Maven 3.9.9](https://maven.apache.org/download.cgi)
 
-## Installation and Usage
+### Installation
 
 To run the app locally, follow these steps:
 
@@ -87,6 +92,8 @@ git clone https://github.com/OwenGraham/digital-scrapbook.git
 ```bash
 cd digital-scrapbook
 ```
+
+### Install Dependencies
 
 Before starting the application, make sure to install the necessary dependencies.
 
@@ -106,10 +113,10 @@ mvn clean install
 
 #### For the Frontend
 
-5. Open the project in a new terminal and navigate to the frontend directory:
+1. Navigate to the frontend directory:
 
 ```bash
-cd frontend
+cd ../frontend
 ```
 
 6. Install dependencies:
@@ -118,19 +125,19 @@ cd frontend
 npm install
 ```
 
-### Primary Method
+### Running the App
 
-7. To start the application, run the following command in the console:
+#### Primary Method
+
+7. To start the application, run the following command in Windows PowerShell from the project's root directory:
 
 ```powershell
-powershell.exe -File "C:\path\to\digital-scrapbook\start-app.ps1"
+.\start-app.ps1
 ```
 
 This script will start both the backend and frontend servers and open the app in your browser.
 
-> Make sure to replace "path\to" with the path to the directory you cloned the repo in
-
-### Alternate Method
+#### Alternate Method
 
 7. Run the backend from the /backend/ directory:
 
@@ -173,6 +180,6 @@ curl -X POST http://localhost:8080/api/scraps \
 }'
 ```
 
-### Contact Information
+## Contact Information
 
 For any questions or suggestions, feel free to contact me at owen.graham@outlook.com.
