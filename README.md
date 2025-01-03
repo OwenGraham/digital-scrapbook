@@ -18,10 +18,10 @@ A demo version of the app with read-only functionality is hosted on GitHub pages
   - [Add Scrap Form](#add-scrap-form)
 - [Prerequisites](#prerequisites)
 - [Installation and Usage](#installation-and-usage)
+  - [For the Backend](#for-the-backend)
+  - [For the Frontend](#for-the-frontend)
   - [Primary Method](#primary-method)
   - [Alternate Method](#alternate-method)
-    - [For the Backend](#for-the-backend)
-    - [For the Frontend](#for-the-frontend)
   - [To Use the App](#to-use-the-app)
   - [API Documentation](#api-documentation)
     - [Endpoints](#endpoints)
@@ -88,19 +88,7 @@ git clone https://github.com/OwenGraham/digital-scrapbook.git
 cd digital-scrapbook
 ```
 
-### Primary Method
-
-3. To start the application, run the following command in the console:
-
-```powershell
-powershell.exe -File "C:\path\to\digital-scrapbook\start-app.ps1"
-```
-
-This script will start both the backend and frontend servers.
-
-> Make sure to replace "path\to" with the path to the directory you cloned the repo in
-
-### Alternate Method
+Before starting the application, make sure to install the necessary dependencies.
 
 #### For the Backend
 
@@ -116,27 +104,41 @@ cd backend
 mvn clean install
 ```
 
-5. Run the backend:
-
-```bash
-mvn spring-boot:run
-```
-
 #### For the Frontend
 
-6. Open the project in a new terminal and navigate to the frontend directory:
+5. Open the project in a new terminal and navigate to the frontend directory:
 
 ```bash
 cd frontend
 ```
 
-1. Install dependencies:
+6. Install dependencies:
 
 ```bash
 npm install
 ```
 
-8. Start the development server:
+### Primary Method
+
+7. To start the application, run the following command in the console:
+
+```powershell
+powershell.exe -File "C:\path\to\digital-scrapbook\start-app.ps1"
+```
+
+This script will start both the backend and frontend servers and open the app in your browser.
+
+> Make sure to replace "path\to" with the path to the directory you cloned the repo in
+
+### Alternate Method
+
+7. Run the backend from the /backend/ directory:
+
+```bash
+mvn spring-boot:run
+```
+
+8. Start the frontend from the /frontend/ directory:
 
 ```bash
 npm start
