@@ -24,6 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 
 /.idea
+/backend/.idea
 /.vscode
 node_modules/
 /test-results/

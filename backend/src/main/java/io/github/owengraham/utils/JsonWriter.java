@@ -10,10 +10,21 @@ import io.github.owengraham.exceptions.WriteScrapException;
 import io.github.owengraham.models.Scrap;
 
 public class JsonWriter {
-    public void writeScraps(String filePath, List<Scrap> scraps) throws WriteScrapException {
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.registerModule(new JavaTimeModule());
+    private final ObjectMapper mapper;
 
+    // Default constructor
+    public JsonWriter() {
+        this.mapper = new ObjectMapper();
+        this.mapper.registerModule(new JavaTimeModule());
+    }
+
+    // Constructor with ObjectMapper parameter for dependency injection
+    public JsonWriter(ObjectMapper mapper) {
+        this.mapper = mapper;
+        this.mapper.registerModule(new JavaTimeModule());
+    }
+
+    public void writeScraps(String filePath, List<? extends Scrap> scraps) throws WriteScrapException {
         try {
             mapper.writeValue(new File(filePath), scraps);
         } catch (IOException e) {

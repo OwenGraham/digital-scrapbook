@@ -13,9 +13,19 @@ import io.github.owengraham.exceptions.LoadScrapsException;
 import io.github.owengraham.models.Scrap;
 
 public class JsonLoader {
+    private final ObjectMapper mapper;
+
+    public JsonLoader() {
+        this.mapper = new ObjectMapper();
+        this.mapper.registerModule(new JavaTimeModule());
+    }
+
+    public JsonLoader(ObjectMapper mapper) {
+        this.mapper = mapper;
+        this.mapper.registerModule(new JavaTimeModule());
+    }
+
     public List<Scrap> loadScraps(String filePath) {
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.registerModule(new JavaTimeModule());
         File file = new File(filePath);
         if (!file.exists()) {
             return new ArrayList<>(); // Return an empty list if the file doesn't exist
