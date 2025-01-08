@@ -1,0 +1,31 @@
+{
+  "scraps": [
+    {
+      "name": "Test Film",
+      "img": "https://pic.pnnet.dev/256x256?text=Lorem%20Picsum",
+      "director": "Test Director",
+      "releaseYear": 1111,
+      "rating": 1,
+      "review": "Test film review",
+      "type": "FILM"
+    },
+    {
+      "name": "Test Book",
+      "img": "https://pic.pnnet.dev/256x256?text=Lorem%20Picsum",
+      "author": "Test Author",
+      "releaseYear": 2222,
+      "rating": 2,
+      "review": "Test book review",
+      "type": "BOOK"
+    },
+    {
+      "name": "Test Album",
+      "img": "https://pic.pnnet.dev/256x256?text=Lorem%20Picsum",
+      "artist": "Test Artist",
+      "releaseYear": 3333,
+      "rating": 3,
+      "review": "Test album review",
+      "type": "ALBUM"
+    }
+  ]
+}

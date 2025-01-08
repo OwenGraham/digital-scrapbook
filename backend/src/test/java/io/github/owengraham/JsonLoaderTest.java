@@ -25,6 +25,6 @@ public class JsonLoaderTest {
     @Test
     @DisplayName("Test loadScraps returns empty list when file does not exist")
     void testLoadScrapsNoFile() {
-
+        // Cant figure this out without powermock
     }
 }
