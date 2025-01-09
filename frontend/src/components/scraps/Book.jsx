@@ -12,9 +12,9 @@ export default function Book({
     <section className="scrap">
       <img src={img} alt="Cover for book" />
       <StarRating rating={rating} />
-      <h2>{name}</h2>
-      <p>{author}</p>
-      <p>{releaseYear}</p>
+      <h2 data-testid="name">{name}</h2>
+      <p data-testid="author">{author}</p>
+      <p data-testid="release-year">{releaseYear}</p>
       <div>
         <p className="review">{review}</p>
       </div>

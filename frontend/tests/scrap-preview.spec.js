@@ -1,43 +1,28 @@
 const { test, expect } = require("@playwright/test");
-
-test.beforeEach(async ({ page }) => {
-  await page.route("http://localhost:8080/api/scraps", async (route) => {
-    const json = {
-      scraps: [
-        {
-          name: "Test Film",
-          img: "https://pic.pnnet.dev/256x256?text=Lorem%20Picsum",
-          director: "Test Director",
-          releaseYear: 1111,
-          rating: 1,
-          review: "Test film review",
-          type: "FILM",
-        },
-        {
-          name: "Test Book",
-          img: "https://pic.pnnet.dev/256x256?text=Lorem%20Picsum",
-          author: "Test Author",
-          releaseYear: 2222,
-          rating: 2,
-          review: "Test book review",
-          type: "BOOK",
-        },
-      ],
-    };
-    await route.fulfill({
-      status: 200,
-      contentType: "application/json",
-      body: JSON.stringify(json),
-    });
-  });
-
-  await page.goto("http://localhost:3000/digital-scrapbook");
-});
+const fs = require("fs");
+const path = require("path");
+const { ScrapPage } = require("./pages/ScrapPage");
 
 test.describe("Check scrap preview functionality", async () => {
+  let scrapPage;
+
   test.beforeEach(async ({ page }) => {
-    await page.getByText("Films").click();
-    await page.locator(".scrap-preview").first().click();
+    await page.route("http://localhost:8080/api/scraps", async (route) => {
+      const dataPath = path.resolve(__dirname, "./data/test-scraps.json");
+      const data = JSON.parse(fs.readFileSync(dataPath, "utf8"));
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify(data),
+      });
+    });
+
+    await page.goto("http://localhost:3000/digital-scrapbook");
+
+    scrapPage = new ScrapPage(page);
+
+    await scrapPage.selectFilter("Films");
+    await scrapPage.getScrapPreviews().first().click();
   });
 
   test("the correct number of scrap previews should be shown", async ({

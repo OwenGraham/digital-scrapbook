@@ -47,25 +47,3 @@ test.describe("Check initial state of page after load", () => {
     await expect(sortDropdown).toHaveValue("newToOld");
   });
 });
-
-test.describe("Check scrap data", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.getByText("Films").click();
-    await page.locator("#sortBy").selectOption({ label: "Old to new" });
-    await page.locator(".scrap-preview").first().click();
-  });
-
-  test("Check that the correct film data is displayed", async ({ page }) => {
-    const scrap = await page.locator(".scrap");
-    const title = await scrap.getByTestId("name").innerText();
-    expect(title).toBe("Do The Right Thing");
-
-    const director = await page.getByTestId("director").innerText();
-    expect(director).toBe("Spike Lee");
-
-    const releaseYear = await page.getByTestId("release-year").innerText();
-    expect(releaseYear).toBe("1989");
-
-    const stars = page.locator("#star-rating label svg");
-  });
-});
